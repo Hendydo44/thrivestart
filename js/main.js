@@ -141,6 +141,76 @@ function debounce(func, wait) {
     };
 }
 
+// Exit Intent Popup
+const exitPopup = document.getElementById('exitPopup');
+const exitPopupClose = document.getElementById('exitPopupClose');
+
+if (exitPopup) {
+    let popupShown = false;
+
+    // Check if popup was already shown this session
+    if (sessionStorage.getItem('exitPopupShown')) {
+        popupShown = true;
+    }
+
+    // Show popup on exit intent (mouse leaving viewport at top)
+    document.addEventListener('mouseout', (e) => {
+        if (popupShown) return;
+
+        // Only trigger when mouse leaves through top of viewport
+        if (e.clientY < 10 && e.relatedTarget === null) {
+            showExitPopup();
+        }
+    });
+
+    // Also show after 45 seconds on page (for mobile/engaged users)
+    setTimeout(() => {
+        if (!popupShown && window.scrollY > 500) {
+            showExitPopup();
+        }
+    }, 45000);
+
+    function showExitPopup() {
+        if (popupShown) return;
+        popupShown = true;
+        sessionStorage.setItem('exitPopupShown', 'true');
+        exitPopup.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+
+        // Track popup view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'popup_view', {
+                'event_category': 'engagement',
+                'event_label': 'exit_intent_popup'
+            });
+        }
+    }
+
+    function closeExitPopup() {
+        exitPopup.classList.remove('visible');
+        document.body.style.overflow = '';
+    }
+
+    // Close on X button
+    if (exitPopupClose) {
+        exitPopupClose.addEventListener('click', closeExitPopup);
+    }
+
+    // Close on overlay click
+    exitPopup.addEventListener('click', (e) => {
+        if (e.target === exitPopup) {
+            closeExitPopup();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && exitPopup.classList.contains('visible')) {
+            closeExitPopup();
+        }
+    });
+}
+
 // Console branding
 console.log('%cThriveStart', 'color: #c9a227; font-size: 24px; font-weight: bold;');
 console.log('%cYour on-demand finance team', 'color: #6b7280; font-size: 14px;');

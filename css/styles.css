@@ -1246,6 +1246,122 @@ footer {
     display: inline-flex;
 }
 
+/* Exit Intent Popup */
+.exit-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 22, 40, 0.85);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exit-popup-overlay.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.exit-popup {
+    background: var(--white);
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.exit-popup-overlay.visible .exit-popup {
+    transform: scale(1);
+}
+
+.exit-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--gray-400);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.exit-popup-close:hover {
+    background: var(--gray-100);
+    color: var(--navy);
+}
+
+.exit-popup-content {
+    padding: 48px 40px;
+    text-align: center;
+}
+
+.exit-popup-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+    color: var(--navy);
+}
+
+.exit-popup-content > p {
+    color: var(--gray-600);
+    margin-bottom: 24px;
+}
+
+.exit-popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exit-popup-form input[type="email"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.exit-popup-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.exit-popup-form .btn {
+    width: 100%;
+}
+
+.exit-popup-note {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+    .exit-popup-content {
+        padding: 40px 24px;
+    }
+    .exit-popup-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     section {
         padding: 60px 0;

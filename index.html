@@ -632,6 +632,24 @@
         </svg>
     </a>
 
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup-overlay" id="exitPopup">
+        <div class="exit-popup">
+            <button class="exit-popup-close" id="exitPopupClose" aria-label="Close">&times;</button>
+            <div class="exit-popup-content">
+                <h2>Wait! Don't Leave Empty-Handed</h2>
+                <p>Get our free 13-Week Cash Flow Template—the same tool we use with clients to manage cash and avoid surprises.</p>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="exit-popup-form" id="exitPopupForm">
+                    <input type="hidden" name="_subject" value="Cash Flow Template (Exit Popup)">
+                    <input type="hidden" name="resource" value="13-Week Cash Flow Template">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Get the Free Template</button>
+                </form>
+                <p class="exit-popup-note">Join 500+ founders using this template. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>
