@@ -1214,6 +1214,38 @@ footer {
     }
 }
 
+/* Sticky Mobile CTA */
+.sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+    z-index: 999;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.sticky-cta:hover {
+    background: var(--gold-light);
+    color: var(--navy);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 6px 24px rgba(201, 162, 39, 0.5);
+}
+
+.sticky-cta.visible {
+    display: inline-flex;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 60px 0;

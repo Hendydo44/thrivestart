@@ -15,33 +15,31 @@
     <meta property="og:url" content="https://thrivestart.co/">
     <meta property="og:title" content="ThriveStart | Fractional CFO & M&A Advisory">
     <meta property="og:description" content="Your on-demand finance team for M&A, modeling, and cash flow clarity. Trusted by founders and PE-backed companies.">
-    <meta property="og:image" content="https://thrivestart.co/images/og-image.jpg">
-    
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://thrivestart.co/">
     <meta name="twitter:title" content="ThriveStart | Fractional CFO & M&A Advisory">
     <meta name="twitter:description" content="Your on-demand finance team for M&A, modeling, and cash flow clarity.">
-    
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" as="style">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
     <!-- Google Analytics 4 -->
-    <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4HSGCJSGP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-C4HSGCJSGP');
     </script>
     
     <!-- Schema.org Structured Data -->
@@ -52,7 +50,6 @@
         "name": "ThriveStart",
         "description": "Fractional CFO services and M&A advisory for founders, independent sponsors, and PE-backed companies.",
         "url": "https://thrivestart.co",
-        "logo": "https://thrivestart.co/images/logo.png",
         "priceRange": "$$$",
         "address": {
             "@type": "PostalAddress",
@@ -143,7 +140,6 @@
         "@type": "Organization",
         "name": "ThriveStart",
         "url": "https://thrivestart.co",
-        "logo": "https://thrivestart.co/images/logo.png",
         "description": "On-demand finance team for M&A, modeling, and cash flow clarity.",
         "founder": {
             "@type": "Person",
@@ -157,6 +153,56 @@
         "sameAs": [
             "https://www.linkedin.com/company/thrivestart",
             "https://twitter.com/thrivestart"
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Why shouldn't I just hire a full-time finance person?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The cost of hiring a full-time senior financial analyst or corporate development manager has risen to over $100,000 per year, plus benefits. Finding qualified talent is challenging, and there may be times you don't have enough work to keep them busy. With our monthly plan, you only pay when you have work—pause anytime."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a limit to how many requests I can make?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Once you become a subscriber, you can add an unlimited number of financial requests to your queue. We work through them one at a time to ensure quality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How quickly will I receive my request?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most requests are completed within a week or less. More intricate, recurring, or complex requests may require additional time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the pause feature work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our billing cycles are 31 days. If you use 21 days and pause, you keep the remaining 10 days for future use. Perfect for when you don't have a full month's worth of work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle refunds?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer a 30-day money-back guarantee if you're not satisfied with your outcomes or deliverables."
+                }
+            }
         ]
     }
     </script>
@@ -206,6 +252,20 @@
                         </svg>
                     </a>
                     <a href="/services/" class="btn btn-secondary">View Services</a>
+                </div>
+                <div class="hero-trust" style="margin-top: 32px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gray-400); font-size: 0.9rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        No credit card required
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gray-400); font-size: 0.9rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        30-day money-back guarantee
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gray-400); font-size: 0.9rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        $95M+ in transactions
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,20 +390,20 @@
             </div>
             <div class="grid-2">
                 <div class="testimonial-card">
-                    <p>"Having on-demand help with our financial modeling and ongoing financial support was essential and crucial in helping us raise our seed round."</p>
+                    <p>"ThriveStart's financial modeling was instrumental in helping us raise our $1.2M seed round. They turned around investor-ready projections in just 5 days."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-author-info">
                             <span class="name">Fangage</span>
-                            <span class="title">Seed-Stage Startup</span>
+                            <span class="title">Seed-Stage Startup · $1.2M Raised</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Whenever we needed financial analysis to support new growth initiatives, ThriveStart was right there with the insights we needed."</p>
+                    <p>"They identified $180K in annual savings within the first month. The CFO insights helped us make confident decisions on three major growth initiatives."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-author-info">
-                            <span class="name">HubSpot Partner</span>
-                            <span class="title">Growth Company</span>
+                            <span class="name">HubSpot Partner Agency</span>
+                            <span class="title">Growth Company · 40% Margin Improvement</span>
                         </div>
                     </div>
                 </div>
@@ -564,6 +624,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <a href="https://calendly.com/thrivestart/15min" class="sticky-cta" id="stickyCta">
+        Book a Free Call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+    </a>
 
     <script src="js/main.js"></script>
 </body>

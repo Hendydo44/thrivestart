@@ -13,14 +13,25 @@ if (mobileMenuBtn && navLinks) {
     });
 }
 
-// Navbar scroll effect
+// Navbar scroll effect & Sticky CTA
 const navbar = document.getElementById('navbar');
+const stickyCta = document.getElementById('stickyCta');
+
 if (navbar) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+
+        // Show sticky CTA after scrolling past hero
+        if (stickyCta) {
+            if (window.scrollY > 600) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
         }
     });
 }
