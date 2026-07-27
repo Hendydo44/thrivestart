@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Automation Guide | ThriveStart</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4HSGCJSGP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C4HSGCJSGP');</script>
+
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #132039;
+            --gold: #c9a227;
+            --gold-light: #e3bc4a;
+            --cream: #f8f6f0;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--navy);
+            line-height: 1.7;
+            background: var(--gray-100);
+        }
+
+        /* Download bar - hidden in print */
+        .download-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--navy);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .download-bar p {
+            color: var(--white);
+            font-size: 0.95rem;
+        }
+
+        .download-bar .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-bar .btn:hover {
+            background: var(--gold-light);
+        }
+
+        /* PDF Container */
+        .pdf-container {
+            max-width: 816px; /* 8.5" at 96dpi */
+            margin: 80px auto 40px;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .pdf-page {
+            padding: 60px;
+            min-height: 1056px; /* 11" at 96dpi */
+            page-break-after: always;
+        }
+
+        .pdf-page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+        }
+
+        .cover-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 80px;
+        }
+
+        .cover-logo span {
+            color: var(--gold);
+        }
+
+        .cover-page h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            max-width: 500px;
+        }
+
+        .cover-page .subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-300);
+            max-width: 400px;
+            margin-bottom: 60px;
+        }
+
+        .cover-meta {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Content Pages */
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: var(--navy);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--gray-700);
+        }
+
+        .chapter-number {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .callout {
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout p {
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .callout strong {
+            color: var(--gold);
+        }
+
+        .tool-box {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .tool-box h4 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+
+        .tool-box ul {
+            margin-bottom: 0;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--gray-300);
+            border-radius: 3px;
+        }
+
+        .footer-branding {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-200);
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            .download-bar {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+            }
+
+            .pdf-container {
+                margin: 0;
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .pdf-page {
+                padding: 0.75in;
+                min-height: auto;
+            }
+
+            .cover-page {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pdf-container {
+                margin: 70px 0 0;
+            }
+
+            .pdf-page {
+                padding: 32px;
+                min-height: auto;
+            }
+
+            .cover-page h1 {
+                font-size: 2rem;
+            }
+
+            .download-bar {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-bar">
+        <p>Your guide is ready! Save it as a PDF for offline access.</p>
+        <button class="btn" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download PDF
+        </button>
+    </div>
+
+    <div class="pdf-container">
+        <!-- Cover Page -->
+        <div class="pdf-page cover-page">
+            <div class="cover-logo">Thrive<span>Start</span></div>
+            <h1>Automate Your Financial Workflows</h1>
+            <p class="subtitle">A practical guide to saving 10+ hours per month and gaining real-time cash flow visibility</p>
+            <p class="cover-meta">ThriveStart Financial Operations Guide</p>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 1</span>
+            <h1>The True Cost of Manual Finance Work</h1>
+
+            <p>If you're like most business owners, you're spending far more time on financial administration than you realize. The receipts piling up in a drawer. The invoices you're manually entering twice. The hours spent building the same reports month after month.</p>
+
+            <p>Here's what we see when we audit a typical small business's finance operations:</p>
+
+            <ul>
+                <li><strong>5-8 hours/week</strong> on accounts receivable follow-ups</li>
+                <li><strong>3-5 hours/week</strong> on expense categorization and entry</li>
+                <li><strong>4-6 hours/month</strong> building financial reports</li>
+                <li><strong>2-3 hours/week</strong> on invoice processing</li>
+                <li><strong>Countless hours</strong> wondering where your cash actually stands</li>
+            </ul>
+
+            <p>That's potentially 40+ hours per month spent on work that could be automated.</p>
+
+            <div class="callout">
+                <p><strong>The Real Cost:</strong> At $100/hour of your time, manual finance work costs you $4,000+ per month in lost productivity. That's $48,000 per year you could be spending on growth.</p>
+            </div>
+
+            <h2>Why Most Automation Attempts Fail</h2>
+
+            <p>You've probably tried to fix this before. Maybe you bought software that promised to "revolutionize" your finances. Maybe you hired a bookkeeper who still does everything manually. Maybe you just gave up and accepted that this is how it has to be.</p>
+
+            <p>The problem isn't the tools. It's the approach.</p>
+
+            <p>Most businesses try to automate everything at once, get overwhelmed, and go back to their old ways. Or they pick the wrong processes to automate first - starting with the complex stuff instead of the quick wins.</p>
+
+            <h2>The Right Approach</h2>
+
+            <p>In this guide, we're going to show you how to automate strategically. You'll learn:</p>
+
+            <ol>
+                <li>Which processes to automate first (and which to leave alone)</li>
+                <li>The exact tools that work for businesses your size</li>
+                <li>How to implement changes without disrupting your operations</li>
+                <li>A week-by-week plan to get you from chaos to clarity</li>
+            </ol>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 2</span>
+            <h1>Your AR Automation Playbook</h1>
+
+            <p>Accounts receivable is where most businesses lose the most time - and the most money. Late payments, forgotten invoices, awkward follow-up emails. It's tedious, uncomfortable, and directly impacts your cash flow.</p>
+
+            <h2>The Manual AR Process</h2>
+
+            <p>Here's what manual AR looks like:</p>
+            <ol>
+                <li>Create invoice in accounting software</li>
+                <li>Email invoice to customer</li>
+                <li>Wait and hope they pay</li>
+                <li>Realize they haven't paid</li>
+                <li>Send awkward follow-up email</li>
+                <li>Repeat steps 4-5 until paid (or give up)</li>
+                <li>Manually record payment when it arrives</li>
+            </ol>
+
+            <p>This process breaks down constantly. Invoices get lost in inboxes. Follow-ups feel uncomfortable so they get delayed. You lose track of who owes what.</p>
+
+            <h2>The Automated AR Process</h2>
+
+            <ol>
+                <li>Create invoice (this part stays manual for now)</li>
+                <li>Invoice auto-sends via email with payment link</li>
+                <li>System sends reminder at Day 3 if unopened</li>
+                <li>System sends payment reminder at Day 7</li>
+                <li>System sends firm reminder at Day 14</li>
+                <li>System escalates to you at Day 21</li>
+                <li>Payment auto-records when customer pays online</li>
+            </ol>
+
+            <div class="tool-box">
+                <h4>Recommended Tools</h4>
+                <ul>
+                    <li><strong>QuickBooks Online</strong> - Built-in payment reminders</li>
+                    <li><strong>Xero</strong> - Automated invoice reminders + Stripe integration</li>
+                    <li><strong>Melio</strong> - Free payment processing with auto-reminders</li>
+                    <li><strong>Stripe Invoicing</strong> - For SaaS and subscription businesses</li>
+                </ul>
+            </div>
+
+            <h2>Implementation Checklist</h2>
+
+            <ul class="checklist">
+                <li>Audit current AR aging (who owes what, how long)</li>
+                <li>Set up online payment acceptance in your invoicing tool</li>
+                <li>Configure automatic reminder sequence (Day 3, 7, 14, 21)</li>
+                <li>Create reminder email templates</li>
+                <li>Set escalation rules for invoices over 30 days</li>
+                <li>Test the full sequence with a friendly customer</li>
+            </ul>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 3</span>
+            <h1>Building a Self-Updating Cash Forecast</h1>
+
+            <p>Most business owners have no idea what their cash position will be in 4 weeks. They check the bank account, see a number, and hope it's enough. This is flying blind.</p>
+
+            <p>A 13-week cash flow forecast changes everything. You see problems before they happen. You make decisions based on data, not gut feel. You sleep better.</p>
+
+            <h2>The 13-Week Framework</h2>
+
+            <p>Why 13 weeks? It's the sweet spot:</p>
+            <ul>
+                <li><strong>Week 1-4:</strong> High accuracy. You know what's coming.</li>
+                <li><strong>Week 5-8:</strong> Good visibility. Most major items are known.</li>
+                <li><strong>Week 9-13:</strong> Trend visibility. Enough time to course-correct.</li>
+            </ul>
+
+            <h2>Building Your Forecast</h2>
+
+            <h3>Cash Inflows</h3>
+            <ul>
+                <li>Expected customer payments (from AR aging)</li>
+                <li>Recurring revenue (subscriptions, retainers)</li>
+                <li>Other income (interest, refunds, etc.)</li>
+            </ul>
+
+            <h3>Cash Outflows</h3>
+            <ul>
+                <li>Payroll (your biggest predictable expense)</li>
+                <li>Rent and fixed costs</li>
+                <li>Vendor payments (from AP aging)</li>
+                <li>Debt service</li>
+                <li>Taxes</li>
+                <li>Variable expenses (estimated)</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Pro Tip:</strong> Start with just the knowns. Your payroll dates, rent due dates, and recurring subscriptions are already in your calendar. That alone gets you 60% of your forecast.</p>
+            </div>
+
+            <h2>Making It Self-Updating</h2>
+
+            <p>The key to a useful forecast is making it easy to maintain. Here's how:</p>
+
+            <ol>
+                <li><strong>Connect to your accounting software</strong> - Pull AR and AP data automatically</li>
+                <li><strong>Use formulas, not manual entry</strong> - Let the spreadsheet do the math</li>
+                <li><strong>Build in actuals tracking</strong> - Compare forecast to reality weekly</li>
+                <li><strong>Set a 15-minute weekly review</strong> - That's all it takes to stay current</li>
+            </ol>
+
+            <div class="tool-box">
+                <h4>Recommended Tools</h4>
+                <ul>
+                    <li><strong>Google Sheets + accounting integration</strong> - Free, flexible</li>
+                    <li><strong>Float</strong> - Purpose-built cash flow forecasting</li>
+                    <li><strong>Pulse</strong> - Visual cash flow management</li>
+                    <li><strong>Fathom</strong> - Forecasting + reporting in one</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 4</span>
+            <h1>Expense Management That Runs Itself</h1>
+
+            <p>Receipt chaos is universal. Crumpled paper in pockets, screenshots on phones, emails with attachments you'll "deal with later." Come tax time, it's a nightmare.</p>
+
+            <h2>The Modern Expense Flow</h2>
+
+            <ol>
+                <li><strong>Capture:</strong> Snap a photo of the receipt immediately</li>
+                <li><strong>Extract:</strong> AI reads the receipt and pulls key data</li>
+                <li><strong>Categorize:</strong> System suggests (or auto-assigns) category</li>
+                <li><strong>Approve:</strong> Quick review and approval</li>
+                <li><strong>Sync:</strong> Expense posts to your accounting software</li>
+                <li><strong>Store:</strong> Digital receipt stored permanently, searchable</li>
+            </ol>
+
+            <p>Total time per expense: 10 seconds instead of 5 minutes.</p>
+
+            <h2>Corporate Card Programs</h2>
+
+            <p>If you're still using personal cards or one shared company card, consider a modern corporate card program:</p>
+
+            <ul>
+                <li><strong>Individual cards for each team member</strong> - No more reimbursements</li>
+                <li><strong>Spending limits by person/category</strong> - Control without micromanagement</li>
+                <li><strong>Real-time transaction alerts</strong> - Know when money is spent</li>
+                <li><strong>Automatic receipt matching</strong> - Card syncs with receipt capture</li>
+                <li><strong>Direct accounting integration</strong> - No manual entry</li>
+            </ul>
+
+            <div class="tool-box">
+                <h4>Recommended Tools</h4>
+                <ul>
+                    <li><strong>Ramp</strong> - Corporate cards + expense management + bill pay</li>
+                    <li><strong>Brex</strong> - Built for startups, strong integrations</li>
+                    <li><strong>Mercury</strong> - Banking + cards for startups</li>
+                    <li><strong>Expensify</strong> - Standalone expense management</li>
+                    <li><strong>Dext (Receipt Bank)</strong> - Receipt capture and processing</li>
+                </ul>
+            </div>
+
+            <h2>Implementation Checklist</h2>
+
+            <ul class="checklist">
+                <li>Choose expense management tool based on your needs</li>
+                <li>Download mobile app for receipt capture</li>
+                <li>Connect to your accounting software</li>
+                <li>Set up expense categories that match your chart of accounts</li>
+                <li>Train yourself (and team) on the 10-second capture habit</li>
+                <li>Set weekly review reminder to approve pending expenses</li>
+            </ul>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 5</span>
+            <h1>Invoice Processing in Minutes, Not Hours</h1>
+
+            <p>Every bill that comes in requires attention: open the email, download the attachment, read the invoice, enter the data, file the document, schedule the payment. Multiply by dozens of vendors and you've got a part-time job.</p>
+
+            <h2>The Automated Invoice Flow</h2>
+
+            <ol>
+                <li><strong>Receive:</strong> Invoices arrive at a dedicated email address</li>
+                <li><strong>Extract:</strong> AI reads the invoice and pulls all data</li>
+                <li><strong>Match:</strong> System matches to PO or expected expense</li>
+                <li><strong>Queue:</strong> Invoice enters approval queue with all context</li>
+                <li><strong>Approve:</strong> One-click approval (or rejection with notes)</li>
+                <li><strong>Schedule:</strong> Payment scheduled automatically based on terms</li>
+                <li><strong>Pay:</strong> Payment executes on scheduled date</li>
+                <li><strong>Record:</strong> Everything syncs to accounting software</li>
+            </ol>
+
+            <h2>The Dedicated AP Email</h2>
+
+            <p>Set up an email address like <strong>invoices@yourcompany.com</strong> that forwards to your processing tool. Train all vendors to send invoices there. This creates a single source of truth and ensures nothing gets lost in personal inboxes.</p>
+
+            <div class="callout">
+                <p><strong>Quick Win:</strong> Most modern bill pay tools can create this email address for you automatically. Bills sent to that address are ingested and processed without any manual download.</p>
+            </div>
+
+            <h2>Approval Workflows</h2>
+
+            <p>For teams, set up approval rules:</p>
+            <ul>
+                <li>Under $500: Auto-approve if it matches a known vendor</li>
+                <li>$500-$5,000: Manager approval required</li>
+                <li>Over $5,000: Executive approval required</li>
+                <li>New vendor: Always requires manual review</li>
+            </ul>
+
+            <div class="tool-box">
+                <h4>Recommended Tools</h4>
+                <ul>
+                    <li><strong>Bill.com</strong> - The industry standard for AP automation</li>
+                    <li><strong>Ramp Bill Pay</strong> - Free with Ramp cards</li>
+                    <li><strong>Melio</strong> - Free bill pay with great UX</li>
+                    <li><strong>Routable</strong> - AP automation for mid-market</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 6</span>
+            <h1>Real-Time Financial Dashboards</h1>
+
+            <p>Monthly financial statements are better than nothing, but they're also three weeks stale by the time you see them. Real-time dashboards give you the numbers that matter, when you need them.</p>
+
+            <h2>The Dashboard That Matters</h2>
+
+            <p>You don't need 50 charts. You need the right 5-7 metrics, updated automatically:</p>
+
+            <h3>Cash Position</h3>
+            <ul>
+                <li>Current cash balance (all accounts)</li>
+                <li>Cash forecast: next 30 days</li>
+                <li>Days of runway at current burn rate</li>
+            </ul>
+
+            <h3>Revenue Health</h3>
+            <ul>
+                <li>Revenue: MTD vs. target</li>
+                <li>AR aging summary (current, 30, 60, 90+)</li>
+                <li>Top 5 outstanding invoices</li>
+            </ul>
+
+            <h3>Spending</h3>
+            <ul>
+                <li>Expenses: MTD by category</li>
+                <li>Variance: actual vs. budget</li>
+                <li>Upcoming large payments (next 14 days)</li>
+            </ul>
+
+            <h2>Building Your Dashboard</h2>
+
+            <p>You have two paths:</p>
+
+            <h3>Option 1: Native Accounting Dashboards</h3>
+            <p>QuickBooks, Xero, and most accounting software have built-in dashboards. They're good enough for many businesses. Customize the default view to show only what matters.</p>
+
+            <h3>Option 2: Dedicated Dashboard Tool</h3>
+            <p>For more control, use a tool that pulls from multiple sources:</p>
+
+            <div class="tool-box">
+                <h4>Recommended Tools</h4>
+                <ul>
+                    <li><strong>Fathom</strong> - Beautiful dashboards, great for investors</li>
+                    <li><strong>Jirav</strong> - Planning + dashboards + forecasting</li>
+                    <li><strong>Klipfolio</strong> - Build anything dashboards</li>
+                    <li><strong>Google Looker Studio</strong> - Free, connects to everything</li>
+                </ul>
+            </div>
+
+            <h2>The 5-Minute Daily Check</h2>
+
+            <p>With a real-time dashboard, your daily finance review takes 5 minutes:</p>
+            <ol>
+                <li>Check cash position (30 seconds)</li>
+                <li>Scan AR aging for problems (1 minute)</li>
+                <li>Review any pending approvals (2 minutes)</li>
+                <li>Note any anomalies to investigate (1 minute)</li>
+            </ol>
+
+            <p>That's it. No logging into multiple systems. No building reports. No surprises.</p>
+        </div>
+
+        <!-- Chapter 7 -->
+        <div class="pdf-page">
+            <span class="chapter-number">Chapter 7</span>
+            <h1>Your 4-Week Implementation Plan</h1>
+
+            <p>Here's exactly how to implement everything in this guide without disrupting your business.</p>
+
+            <h2>Week 1: Foundation</h2>
+            <ul class="checklist">
+                <li>Audit current time spent on manual finance work</li>
+                <li>List all financial tools you currently use</li>
+                <li>Identify your biggest pain point (usually AR or expenses)</li>
+                <li>Choose one tool to implement first</li>
+                <li>Set up the tool (just install, don't configure yet)</li>
+            </ul>
+
+            <h2>Week 2: Quick Win</h2>
+            <ul class="checklist">
+                <li>Configure your first automation (AR reminders recommended)</li>
+                <li>Test the automation with a friendly customer or vendor</li>
+                <li>Set up receipt capture app on your phone</li>
+                <li>Start the receipt capture habit (every expense, immediately)</li>
+                <li>Connect receipt tool to accounting software</li>
+            </ul>
+
+            <h2>Week 3: Cash Visibility</h2>
+            <ul class="checklist">
+                <li>Build (or set up) your 13-week cash flow forecast</li>
+                <li>Populate with known cash flows (payroll, rent, subscriptions)</li>
+                <li>Add AR and AP data</li>
+                <li>Set up your financial dashboard</li>
+                <li>Schedule your first 15-minute weekly forecast review</li>
+            </ul>
+
+            <h2>Week 4: Optimization</h2>
+            <ul class="checklist">
+                <li>Set up AP automation (dedicated email, bill processing)</li>
+                <li>Configure approval workflows</li>
+                <li>Review and refine your AR reminder sequence</li>
+                <li>Document your new processes</li>
+                <li>Measure time saved vs. Week 1 baseline</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Remember:</strong> You don't have to do everything at once. Even implementing one automation saves hours. Start with what hurts most, prove the value, then expand.</p>
+            </div>
+
+            <h2>Need Help?</h2>
+
+            <p>If you'd like expert guidance implementing these systems, we're here to help. ThriveStart offers hands-on financial operations support for growing businesses.</p>
+
+            <p><strong>Book a free strategy call:</strong> calendly.com/thrivestart/15min</p>
+
+            <div class="footer-branding">
+                <p>ThriveStart | Your On-Demand Finance Team</p>
+                <p>thrivestart.co</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track that user viewed the download page
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'view_download_page', {
+                'resource': 'Financial Automation Guide'
+            });
+        }
+    </script>
+</body>
+</html>

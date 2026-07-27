@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Guide: Automate Your Financial Workflows | ThriveStart</title>
+    <meta name="description" content="Download our free guide to automating financial workflows. Learn how to increase cash flow, reduce manual work, and scale your business finances.">
+    <meta name="keywords" content="financial automation, cash flow automation, accounting automation, financial workflows, business finance automation">
+    <link rel="canonical" href="https://thrivestart.co/resources/financial-automation-guide/">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thrivestart.co/resources/financial-automation-guide/">
+    <meta property="og:title" content="Free Guide: Automate Your Financial Workflows">
+    <meta property="og:description" content="Download our free guide to automating financial workflows and increasing cash flow.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4HSGCJSGP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C4HSGCJSGP');</script>
+
+    <style>
+        .lead-magnet-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 120px 0 80px;
+        }
+        .lead-magnet-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .lead-magnet-content h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        .lead-magnet-content p {
+            color: var(--gray-300);
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+        }
+        .lead-magnet-benefits {
+            list-style: none;
+            margin: 32px 0;
+        }
+        .lead-magnet-benefits li {
+            color: var(--gray-300);
+            padding: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .lead-magnet-benefits li::before {
+            content: '\2713';
+            color: var(--gold);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .lead-magnet-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .lead-magnet-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .lead-magnet-form .subtitle {
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        .form-privacy {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-top: 16px;
+        }
+        .preview-section {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+        .preview-box {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+        .preview-box h3 {
+            margin-bottom: 24px;
+        }
+        .preview-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .preview-feature {
+            display: flex;
+            gap: 12px;
+        }
+        .preview-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--cream);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .preview-feature h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .preview-feature p {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+        }
+        .sneak-peek {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .sneak-peek-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .sneak-peek-content h2 {
+            margin-bottom: 24px;
+        }
+        .sneak-peek-content p {
+            margin-bottom: 16px;
+        }
+        .sneak-peek-preview {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 32px;
+            border: 2px dashed var(--gray-300);
+        }
+        .sneak-peek-preview h4 {
+            color: var(--gold-dark);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        .sneak-peek-preview ul {
+            list-style: none;
+        }
+        .sneak-peek-preview li {
+            padding: 8px 0;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .sneak-peek-preview li:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .lead-magnet-grid,
+            .sneak-peek-grid {
+                grid-template-columns: 1fr;
+            }
+            .preview-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="/" class="logo">Thrive<span>Start</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-dropdown">
+                    <a href="/services/">Services</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/services/cfo-services/">CFO Services</a>
+                        <a href="/services/ma-advisory/">M&A Advisory</a>
+                        <a href="/services/capital-advisory/">Capital Advisory</a>
+                        <a href="/services/financial-due-diligence/">Financial Due Diligence</a>
+                        <a href="/services/financial-workouts/">Financial Workouts</a>
+                        <a href="/services/deal-structuring/">Deal Structuring</a>
+                        <a href="/services/sba-distressed/">SBA Distressed Situations</a>
+                        <a href="/services/ai-financial-implementation/">AI Financial Implementation</a>
+                    </div>
+                </li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="https://calendly.com/thrivestart/15min" class="nav-cta">Book a Call</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="lead-magnet-hero">
+        <div class="container">
+            <div class="lead-magnet-grid">
+                <div class="lead-magnet-content">
+                    <h1>Stop Doing Your Financial Work Manually</h1>
+                    <p>This free guide shows you exactly how to automate your financial workflows, increase cash flow visibility, and free up hours every week - without expensive software or a full-time CFO.</p>
+
+                    <ul class="lead-magnet-benefits">
+                        <li>5 financial processes you can automate this week</li>
+                        <li>Real examples from businesses saving 10+ hours/month</li>
+                        <li>The exact tools we recommend (most are free)</li>
+                        <li>Step-by-step implementation checklists</li>
+                        <li>Cash flow visibility tactics that work immediately</li>
+                    </ul>
+
+                    <p style="color: var(--gold); font-weight: 600;">Built for founders and operators who are tired of spreadsheet chaos.</p>
+                </div>
+
+                <div class="lead-magnet-form">
+                    <h2>Get the Free Guide</h2>
+                    <p class="subtitle">Instant access - no waiting for emails.</p>
+
+                    <form action="download.html" method="GET" id="leadForm">
+                        <div class="form-group">
+                            <label for="name">First Name</label>
+                            <input type="text" id="name" name="name" placeholder="Carter" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Get Instant Access
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <p class="form-privacy">We respect your privacy. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="preview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Inside the Guide</h2>
+                <p>Practical tactics you can implement today</p>
+            </div>
+
+            <div class="preview-box">
+                <div class="preview-features">
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">1</div>
+                        <div>
+                            <h4>Accounts Receivable Automation</h4>
+                            <p>Stop chasing payments manually. Set up systems that follow up for you.</p>
+                        </div>
+                    </div>
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">2</div>
+                        <div>
+                            <h4>Cash Flow Forecasting</h4>
+                            <p>Build a rolling 13-week forecast that updates automatically.</p>
+                        </div>
+                    </div>
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">3</div>
+                        <div>
+                            <h4>Expense Management</h4>
+                            <p>Eliminate receipt chaos with automated categorization and approval flows.</p>
+                        </div>
+                    </div>
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">4</div>
+                        <div>
+                            <h4>Invoice Processing</h4>
+                            <p>Turn invoice entry from hours to minutes with smart capture tools.</p>
+                        </div>
+                    </div>
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">5</div>
+                        <div>
+                            <h4>Financial Reporting</h4>
+                            <p>Get real-time dashboards instead of waiting for monthly closes.</p>
+                        </div>
+                    </div>
+                    <div class="preview-feature">
+                        <div class="preview-feature-icon">+</div>
+                        <div>
+                            <h4>Implementation Checklists</h4>
+                            <p>Week-by-week action plans so you know exactly what to do next.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sneak-peek">
+        <div class="container">
+            <div class="sneak-peek-grid">
+                <div class="sneak-peek-content">
+                    <h2>A Sneak Peek Inside</h2>
+                    <p>Most business owners are drowning in manual financial work. They're entering the same data twice, chasing invoices by hand, and building reports from scratch every month.</p>
+                    <p>This guide shows you how to escape that cycle. We've helped companies go from 20+ hours of manual finance work per week to under 5 - while actually improving their cash flow visibility.</p>
+                    <p><strong>The best part?</strong> You don't need expensive enterprise software. Most of the tools we recommend are free or under $50/month.</p>
+                </div>
+                <div class="sneak-peek-preview">
+                    <h4>Chapter Preview</h4>
+                    <ul>
+                        <li>Chapter 1: The True Cost of Manual Finance Work</li>
+                        <li>Chapter 2: Your AR Automation Playbook</li>
+                        <li>Chapter 3: Building a Self-Updating Cash Forecast</li>
+                        <li>Chapter 4: Expense Management That Runs Itself</li>
+                        <li>Chapter 5: Invoice Processing in Minutes, Not Hours</li>
+                        <li>Chapter 6: Real-Time Financial Dashboards</li>
+                        <li>Chapter 7: Your 4-Week Implementation Plan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Automate Your Finances?</h2>
+            <p>Get the guide and start saving hours every week.</p>
+            <a href="#" class="btn btn-primary" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'}); return false;">Get Your Free Guide</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Thrive<span>Start</span></a>
+                    <p>Your on-demand finance team for M&A, modeling, and cash flow clarity.</p>
+                </div>
+                <div class="footer-links"><h4>Services</h4><ul><li><a href="/services/cfo-services/">CFO Services</a></li><li><a href="/services/ma-advisory/">M&A Advisory</a></li><li><a href="/services/capital-advisory/">Capital Advisory</a></li></ul></div>
+                <div class="footer-links"><h4>Company</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+                <div class="footer-links"><h4>Get Started</h4><ul><li><a href="https://calendly.com/thrivestart/15min">Book a Call</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 ThriveStart. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+        // Track form submission and send to Formspree in background
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+
+            // Send to Formspree in background (don't wait for response)
+            fetch('https://formspree.io/f/mdaedbwd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    name: name,
+                    _subject: 'Financial Automation Guide Download',
+                    resource: 'Financial Automation Guide'
+                })
+            });
+
+            // Track in GA4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'lead_magnet_download', {
+                    'resource': 'Financial Automation Guide'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
