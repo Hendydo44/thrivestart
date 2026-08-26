@@ -1,0 +1,24 @@
+{
+  "name": "thrivestart",
+  "version": "1.0.0",
+  "description": "A production-ready, SEO-optimized website for ThriveStart - M&A Advisory & Fractional CFO Services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hendydo44/thrivestart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hendydo44/thrivestart/issues"
+  },
+  "homepage": "https://github.com/Hendydo44/thrivestart#readme",
+  "dependencies": {
+    "@heycatch/sdk": "^0.7.0"
+  }
+}

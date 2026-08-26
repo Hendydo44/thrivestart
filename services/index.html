@@ -29,7 +29,14 @@
         gtag('js', new Date());
         gtag('config', 'G-C4HSGCJSGP');
     </script>
-    
+    <script type="module">
+        import { analytics } from 'https://esm.sh/@heycatch/sdk';
+        analytics.init({
+            projectKey: 'hck_pk_Gh01-l7xddiF9q7WUIlt34dPtNAfrpQY',
+            install: { framework: 'web', frameworkVersion: '1', agent: 'claude-code' },
+        });
+    </script>
+
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
