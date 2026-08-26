@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Ads - Financial Automation Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #132039;
+            --gold: #c9a227;
+            --gold-light: #e3bc4a;
+            --cream: #f8f6f0;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--gray-100);
+            padding: 40px;
+            color: var(--navy);
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .subtitle {
+            color: var(--gray-500);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            margin: 60px 0 24px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        /* Ad Preview Cards */
+        .ad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .ad-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .ad-card-header {
+            background: var(--navy);
+            color: white;
+            padding: 12px 16px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .ad-preview {
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .ad-account {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .ad-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-family: 'DM Serif Display', serif;
+            font-size: 0.9rem;
+        }
+
+        .ad-account-info {
+            flex: 1;
+        }
+
+        .ad-account-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .ad-account-meta {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+
+        .ad-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            white-space: pre-line;
+        }
+
+        .ad-image {
+            width: 100%;
+            aspect-ratio: 1.91/1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .ad-cta-bar {
+            background: var(--gray-100);
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ad-headline {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .ad-description {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .ad-button {
+            background: var(--navy);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Image Styles */
+        .img-stats {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+        }
+
+        .img-stats .big-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .img-stats .big-text {
+            font-size: 1.5rem;
+            margin-top: 8px;
+            max-width: 300px;
+        }
+
+        .img-stats .small-text {
+            font-size: 1rem;
+            color: var(--gray-200);
+            margin-top: 16px;
+        }
+
+        .img-checklist {
+            background: var(--cream);
+            text-align: left;
+            padding: 40px !important;
+        }
+
+        .img-checklist .checklist-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: var(--navy);
+        }
+
+        .img-checklist .checklist-item {
+            font-size: 1.1rem;
+            padding: 8px 0;
+            color: var(--gray-500);
+            text-decoration: line-through;
+        }
+
+        .img-checklist .checklist-cta {
+            font-size: 1.25rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .img-simple {
+            background: var(--navy);
+            color: white;
+        }
+
+        .img-simple .main-text {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            max-width: 350px;
+            line-height: 1.3;
+        }
+
+        .img-simple .sub-text {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-top: 16px;
+            font-weight: 600;
+        }
+
+        .img-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 !important;
+        }
+
+        .img-split-left {
+            background: var(--gray-200);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-split-left .chaos-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        .img-split-left .label {
+            font-weight: 600;
+            color: var(--gray-500);
+        }
+
+        .img-split-right {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .img-split-right .order-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        .img-split-right .label {
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .img-question {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--navy);
+        }
+
+        .img-question .main-text {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            max-width: 350px;
+            line-height: 1.3;
+        }
+
+        .img-question .sub-text {
+            font-size: 1rem;
+            margin-top: 16px;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .img-list {
+            background: var(--navy);
+            color: white;
+            text-align: left;
+            padding: 40px !important;
+        }
+
+        .img-list .list-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .img-list .list-item {
+            font-size: 1rem;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .img-list .list-item::before {
+            content: "\2713";
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .logo-corner {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 0.9rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .logo-corner span {
+            color: var(--gold);
+        }
+
+        .ad-image {
+            position: relative;
+        }
+
+        /* Standalone Images Section */
+        .standalone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 32px;
+        }
+
+        .standalone-image {
+            aspect-ratio: 1.91/1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .standalone-square {
+            aspect-ratio: 1/1;
+            width: 500px;
+        }
+
+        .image-label {
+            background: var(--navy);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .copy-section {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .copy-section h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+
+        .copy-text {
+            background: var(--gray-100);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            white-space: pre-line;
+            margin-bottom: 16px;
+        }
+
+        .copy-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .copy-meta-item {
+            background: var(--cream);
+            padding: 12px 16px;
+            border-radius: 6px;
+        }
+
+        .copy-meta-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-bottom: 4px;
+        }
+
+        .copy-meta-value {
+            font-weight: 600;
+        }
+
+        .instructions {
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .instructions h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .instructions p {
+            font-size: 0.95rem;
+            color: var(--gray-700);
+        }
+    </style>
+</head>
+<body>
+    <h1>Social Ads - Financial Automation Guide</h1>
+    <p class="subtitle">Facebook & Instagram ad mockups - screenshot what you need</p>
+
+    <div class="instructions">
+        <h3>How to use this page:</h3>
+        <p>Scroll through the mockups below. Right-click and "Save image as" on any visual, or take screenshots of the full ad previews. The standalone images at the bottom are sized for Facebook/Instagram (1200x628 for feed, 1080x1080 for square).</p>
+    </div>
+
+    <!-- AD PREVIEWS -->
+    <h2 class="section-title">Full Ad Previews</h2>
+
+    <div class="ad-grid">
+        <!-- Ad 1: Stats Hook -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 1: Stats Hook (Time Wasted)</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">40+ hours per month.
+
+That's how much time the average small business wastes on manual financial work.
+
+At $100/hour of your time, that's $48,000/year in lost productivity.
+
+We put together a free guide showing how to automate:
+- Accounts receivable follow-ups
+- Cash flow forecasting
+- Expense management
+- Invoice processing
+- Financial reporting
+
+Most of the tools are free. All of the tactics work.</div>
+            </div>
+            <div class="ad-image img-stats">
+                <div class="big-number">40+</div>
+                <div class="big-text">hours/month wasted on manual finance work</div>
+                <div class="small-text">Free guide: Get them back</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">Save 40+ Hours/Month on Finance Work</div>
+                    <div class="ad-description">Free automation guide for business owners</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+
+        <!-- Ad 2: Pain Point -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 2: Pain Point (Founder Story)</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">You didn't start a business to chase invoices and categorize receipts.
+
+Yet here you are, spending 10+ hours a month on financial busywork that should be automated.
+
+We put together a free guide showing exactly how to fix this - the same playbook we use with our CFO clients.
+
+Download it free. Start saving hours this week.</div>
+            </div>
+            <div class="ad-image img-simple">
+                <div class="main-text">Stop doing your finances manually.</div>
+                <div class="sub-text">Free automation guide inside.</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">Free Guide: Automate Your Financial Workflows</div>
+                    <div class="ad-description">5 processes you can automate today</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+
+        <!-- Ad 3: Checklist -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 3: Checklist Visual</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">What if your invoices followed up on themselves?
+
+What if your cash forecast updated automatically?
+
+What if you never had to dig through receipts again?
+
+This isn't fantasy. It's what happens when you automate your financial workflows.
+
+We created a free guide with exactly how to do it - including the specific tools we recommend (most are free).
+
+Grab your copy. Takes 2 seconds.</div>
+            </div>
+            <div class="ad-image img-checklist">
+                <div class="checklist-title">Your old to-do list:</div>
+                <div class="checklist-item">Chase late invoices</div>
+                <div class="checklist-item">Enter receipts manually</div>
+                <div class="checklist-item">Build monthly reports</div>
+                <div class="checklist-item">Wonder about cash flow</div>
+                <div class="checklist-cta">Automate all of this.</div>
+                <div class="logo-corner" style="color: var(--navy);">Thrive<span>Start</span></div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">Automate Your Financial Workflows</div>
+                    <div class="ad-description">Free guide with step-by-step playbooks</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+
+        <!-- Ad 4: Question Hook -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 4: Question Hook (Cash Flow)</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">Do you actually know what your cash position will be in 4 weeks?
+
+Most business owners don't. They check the bank account, see a number, and hope it's enough.
+
+That's not a strategy. That's stress.
+
+Our free guide shows you how to build a self-updating 13-week cash forecast - plus 4 other automations that give you real visibility into your money.
+
+No expensive software required.</div>
+            </div>
+            <div class="ad-image img-question">
+                <div class="main-text">Do you know your cash position in 4 weeks?</div>
+                <div class="sub-text">Free guide to cash flow clarity</div>
+                <div class="logo-corner" style="color: var(--navy);">Thrive<span>Start</span></div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">Finally Get Cash Flow Clarity</div>
+                    <div class="ad-description">Free guide - download instantly</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+
+        <!-- Ad 5: Before/After -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 5: Before/After Split</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">We've helped dozens of companies go from 20+ hours of manual finance work per week to under 5.
+
+Not by hiring more people. By automating the right things.
+
+Now we're giving away the playbook for free:
+
+- AR automation that follows up for you
+- Cash forecasting that updates itself
+- Expense management that takes 10 seconds
+- Invoice processing in minutes, not hours
+- Real-time dashboards instead of monthly reports
+
+Download it. Implement one thing. See the difference.</div>
+            </div>
+            <div class="ad-image img-split">
+                <div class="img-split-left">
+                    <div class="chaos-icon">📊😫</div>
+                    <div class="label">Manual chaos</div>
+                </div>
+                <div class="img-split-right">
+                    <div class="order-icon">📈✨</div>
+                    <div class="label">Automated clarity</div>
+                </div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">The Finance Automation Playbook</div>
+                    <div class="ad-description">From the team at ThriveStart</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+
+        <!-- Ad 6: List Format -->
+        <div class="ad-card">
+            <div class="ad-card-header">Ad 6: Feature List</div>
+            <div class="ad-preview">
+                <div class="ad-account">
+                    <div class="ad-avatar">TS</div>
+                    <div class="ad-account-info">
+                        <div class="ad-account-name">ThriveStart</div>
+                        <div class="ad-account-meta">Sponsored</div>
+                    </div>
+                </div>
+                <div class="ad-text">Free guide: How to automate your financial workflows and save 10+ hours/month.
+
+Inside:
+- 5 processes to automate immediately
+- Tool recommendations (most are free)
+- Step-by-step implementation checklists
+- 4-week action plan
+
+Built for founders and operators who are done with spreadsheet chaos.
+
+Download it now.</div>
+            </div>
+            <div class="ad-image img-list">
+                <div class="list-title">Inside the free guide:</div>
+                <div class="list-item">AR automation playbook</div>
+                <div class="list-item">Self-updating cash forecast</div>
+                <div class="list-item">Expense management setup</div>
+                <div class="list-item">Invoice processing in minutes</div>
+                <div class="list-item">Real-time dashboards</div>
+                <div class="list-item">4-week implementation plan</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+            <div class="ad-cta-bar">
+                <div>
+                    <div class="ad-headline">Free Financial Automation Guide</div>
+                    <div class="ad-description">Save 10+ hours/month</div>
+                </div>
+                <div class="ad-button">Download</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STANDALONE IMAGES -->
+    <h2 class="section-title">Standalone Images (Screenshot These)</h2>
+    <p style="margin-bottom: 24px; color: var(--gray-500);">Right-click > Save image as, or screenshot these for your ads.</p>
+
+    <div class="standalone-grid">
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-stats">
+                <div class="big-number">40+</div>
+                <div class="big-text">hours/month wasted on manual finance work</div>
+                <div class="small-text">Free guide: Get them back</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-simple">
+                <div class="main-text">Stop doing your finances manually.</div>
+                <div class="sub-text">Free automation guide inside.</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-checklist">
+                <div class="checklist-title">Your old to-do list:</div>
+                <div class="checklist-item">Chase late invoices</div>
+                <div class="checklist-item">Enter receipts manually</div>
+                <div class="checklist-item">Build monthly reports</div>
+                <div class="checklist-item">Wonder about cash flow</div>
+                <div class="checklist-cta">Automate all of this.</div>
+                <div class="logo-corner" style="color: var(--navy);">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-question">
+                <div class="main-text">Do you know your cash position in 4 weeks?</div>
+                <div class="sub-text">Free guide to cash flow clarity</div>
+                <div class="logo-corner" style="color: var(--navy);">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-list">
+                <div class="list-title">Inside the free guide:</div>
+                <div class="list-item">AR automation playbook</div>
+                <div class="list-item">Self-updating cash forecast</div>
+                <div class="list-item">Expense management setup</div>
+                <div class="list-item">Invoice processing in minutes</div>
+                <div class="list-item">Real-time dashboards</div>
+                <div class="list-item">4-week implementation plan</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Feed Image (1.91:1)</div>
+            <div class="standalone-image img-split">
+                <div class="img-split-left">
+                    <div class="chaos-icon">📊😫</div>
+                    <div class="label">Manual chaos</div>
+                </div>
+                <div class="img-split-right">
+                    <div class="order-icon">📈✨</div>
+                    <div class="label">Automated clarity</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SQUARE IMAGES FOR INSTAGRAM -->
+    <h2 class="section-title">Square Images (Instagram/Stories)</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 32px;">
+        <div>
+            <div class="image-label">Square (1:1)</div>
+            <div class="standalone-image standalone-square img-stats">
+                <div class="big-number">40+</div>
+                <div class="big-text">hours/month wasted on manual finance work</div>
+                <div class="small-text">Free guide: Get them back</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Square (1:1)</div>
+            <div class="standalone-image standalone-square img-simple">
+                <div class="main-text" style="font-size: 2.5rem;">Stop doing your finances manually.</div>
+                <div class="sub-text" style="font-size: 1.25rem;">Free automation guide inside.</div>
+                <div class="logo-corner">Thrive<span>Start</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-label">Square (1:1)</div>
+            <div class="standalone-image standalone-square img-question">
+                <div class="main-text" style="font-size: 2rem;">Do you know your cash position in 4 weeks?</div>
+                <div class="sub-text">Free guide to cash flow clarity</div>
+                <div class="logo-corner" style="color: var(--navy);">Thrive<span>Start</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COPY REFERENCE -->
+    <h2 class="section-title">Ad Copy Reference</h2>
+
+    <div class="copy-section">
+        <h3>Short Copy (Best for busy feeds)</h3>
+        <div class="copy-text">You didn't start a business to chase invoices and categorize receipts.
+
+Yet here you are, spending 10+ hours a month on financial busywork that should be automated.
+
+We put together a free guide showing exactly how to fix this - the same playbook we use with our CFO clients.
+
+Download it free. Start saving hours this week.</div>
+        <div class="copy-meta">
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Headline</div>
+                <div class="copy-meta-value">Free Guide: Automate Your Financial Workflows</div>
+            </div>
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Description</div>
+                <div class="copy-meta-value">5 processes you can automate today</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-section">
+        <h3>Stats Copy (Attention-grabbing)</h3>
+        <div class="copy-text">40+ hours per month.
+
+That's how much time the average small business wastes on manual financial work.
+
+At $100/hour of your time, that's $48,000/year in lost productivity.
+
+We put together a free guide showing how to automate:
+- Accounts receivable follow-ups
+- Cash flow forecasting
+- Expense management
+- Invoice processing
+- Financial reporting
+
+Most of the tools are free. All of the tactics work.</div>
+        <div class="copy-meta">
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Headline</div>
+                <div class="copy-meta-value">Save 40+ Hours/Month on Finance Work</div>
+            </div>
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Description</div>
+                <div class="copy-meta-value">Free automation guide for business owners</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-section">
+        <h3>Question Hook (Cash Flow Angle)</h3>
+        <div class="copy-text">Do you actually know what your cash position will be in 4 weeks?
+
+Most business owners don't. They check the bank account, see a number, and hope it's enough.
+
+That's not a strategy. That's stress.
+
+Our free guide shows you how to build a self-updating 13-week cash forecast - plus 4 other automations that give you real visibility into your money.
+
+No expensive software required.</div>
+        <div class="copy-meta">
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Headline</div>
+                <div class="copy-meta-value">Finally Get Cash Flow Clarity</div>
+            </div>
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Description</div>
+                <div class="copy-meta-value">Free guide - download instantly</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-section">
+        <h3>Founder Callout</h3>
+        <div class="copy-text">Founders: You're not supposed to be your own bookkeeper.
+
+But somehow you're still entering receipts at 11pm, chasing invoices on weekends, and building cash reports from scratch every month.
+
+There's a better way.
+
+We created a free guide with 5 financial automations you can set up this month - most using free tools.
+
+Your time is worth more than data entry.</div>
+        <div class="copy-meta">
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Headline</div>
+                <div class="copy-meta-value">Stop Being Your Own Bookkeeper</div>
+            </div>
+            <div class="copy-meta-item">
+                <div class="copy-meta-label">Description</div>
+                <div class="copy-meta-value">Free automation guide for founders</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
