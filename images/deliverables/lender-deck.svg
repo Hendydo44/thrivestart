@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#132039"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.12)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.05)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad3)" rx="12"/>
+
+  <!-- Slide indicator -->
+  <rect x="24" y="24" width="752" height="40" fill="rgba(255,255,255,0.03)" rx="8"/>
+  <text x="44" y="50" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="12">Lender Presentation</text>
+  <text x="400" y="50" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Investment Highlights</text>
+  <text x="756" y="50" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">Slide 4 of 12</text>
+
+  <!-- Main slide content -->
+  <rect x="24" y="80" width="752" height="396" fill="url(#cardGrad)" rx="8" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Slide Title -->
+  <text x="56" y="125" fill="#c9a227" font-family="system-ui, sans-serif" font-size="24" font-weight="700">Use of Funds &amp; Financial Projections</text>
+  <line x1="56" y1="140" x2="300" y2="140" stroke="#c9a227" stroke-width="2"/>
+
+  <!-- Left Column - Use of Funds -->
+  <text x="56" y="175" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Proposed Funding: $2.5M</text>
+
+  <rect x="56" y="195" width="320" height="36" fill="rgba(201,162,39,0.15)" rx="6"/>
+  <text x="72" y="218" fill="#c9a227" font-family="system-ui, sans-serif" font-size="13">Working Capital</text>
+  <text x="360" y="218" fill="#c9a227" font-family="system-ui, sans-serif" font-size="13" text-anchor="end">$1,000,000</text>
+
+  <rect x="56" y="240" width="320" height="36" fill="rgba(255,255,255,0.05)" rx="6"/>
+  <text x="72" y="263" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13">Equipment &amp; Capex</text>
+  <text x="360" y="263" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13" text-anchor="end">$750,000</text>
+
+  <rect x="56" y="285" width="320" height="36" fill="rgba(255,255,255,0.05)" rx="6"/>
+  <text x="72" y="308" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13">Sales &amp; Marketing</text>
+  <text x="360" y="308" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13" text-anchor="end">$500,000</text>
+
+  <rect x="56" y="330" width="320" height="36" fill="rgba(255,255,255,0.05)" rx="6"/>
+  <text x="72" y="353" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13">Contingency Reserve</text>
+  <text x="360" y="353" fill="rgba(255,255,255,0.8)" font-family="system-ui, sans-serif" font-size="13" text-anchor="end">$250,000</text>
+
+  <!-- Right Column - Projections -->
+  <text x="424" y="175" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">3-Year Projections</text>
+
+  <!-- Mini projection chart -->
+  <rect x="424" y="195" width="320" height="170" fill="rgba(255,255,255,0.03)" rx="6"/>
+
+  <!-- Year labels -->
+  <text x="480" y="350" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Year 1</text>
+  <text x="580" y="350" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Year 2</text>
+  <text x="680" y="350" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Year 3</text>
+
+  <!-- Revenue bars -->
+  <rect x="455" y="280" width="50" height="60" fill="#c9a227" rx="4"/>
+  <text x="480" y="270" fill="#c9a227" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">$5.1M</text>
+
+  <rect x="555" y="240" width="50" height="100" fill="#c9a227" rx="4"/>
+  <text x="580" y="230" fill="#c9a227" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">$7.8M</text>
+
+  <rect x="655" y="210" width="50" height="130" fill="#c9a227" rx="4"/>
+  <text x="680" y="200" fill="#c9a227" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">$11.2M</text>
+
+  <!-- Key metrics row -->
+  <rect x="424" y="385" width="100" height="70" fill="rgba(52,211,153,0.1)" rx="6"/>
+  <text x="474" y="415" fill="rgba(52,211,153,0.7)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">REVENUE CAGR</text>
+  <text x="474" y="440" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">48%</text>
+
+  <rect x="534" y="385" width="100" height="70" fill="rgba(255,255,255,0.05)" rx="6"/>
+  <text x="584" y="415" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Y3 EBITDA</text>
+  <text x="584" y="440" fill="#fff" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">$2.8M</text>
+
+  <rect x="644" y="385" width="100" height="70" fill="rgba(255,255,255,0.05)" rx="6"/>
+  <text x="694" y="415" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">DSCR Y2+</text>
+  <text x="694" y="440" fill="#fff" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">2.4x</text>
+
+  <!-- Bottom summary -->
+  <rect x="56" y="385" width="320" height="70" fill="rgba(201,162,39,0.1)" rx="6"/>
+  <text x="72" y="415" fill="#c9a227" font-family="system-ui, sans-serif" font-size="11">PROPOSED TERMS</text>
+  <text x="72" y="440" fill="#fff" font-family="system-ui, sans-serif" font-size="13">$2.5M Senior Term Loan • 5-Year • Prime + 2.5%</text>
+
+  <!-- Slide navigation dots -->
+  <circle cx="365" cy="485" r="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="385" cy="485" r="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="405" cy="485" r="4" fill="#c9a227"/>
+  <circle cx="425" cy="485" r="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="445" cy="485" r="4" fill="rgba(255,255,255,0.2)"/>
+</svg>

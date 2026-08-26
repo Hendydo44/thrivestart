@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#132039"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3bc4a"/>
+      <stop offset="100%" style="stop-color:#c9a227"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Header -->
+  <rect x="24" y="24" width="752" height="60" fill="rgba(255,255,255,0.05)" rx="8"/>
+  <text x="44" y="62" fill="#c9a227" font-family="system-ui, sans-serif" font-size="18" font-weight="600">13-Week Rolling Cash Flow Forecast</text>
+  <text x="730" y="62" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">Updated: Live</text>
+
+  <!-- Summary Cards -->
+  <rect x="24" y="100" width="175" height="80" fill="rgba(255,255,255,0.08)" rx="8"/>
+  <text x="44" y="128" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11">STARTING CASH</text>
+  <text x="44" y="158" fill="#fff" font-family="system-ui, sans-serif" font-size="24" font-weight="700">$847,200</text>
+
+  <rect x="215" y="100" width="175" height="80" fill="rgba(255,255,255,0.08)" rx="8"/>
+  <text x="235" y="128" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11">PROJECTED INFLOWS</text>
+  <text x="235" y="158" fill="#34d399" font-family="system-ui, sans-serif" font-size="24" font-weight="700">+$1.2M</text>
+
+  <rect x="406" y="100" width="175" height="80" fill="rgba(255,255,255,0.08)" rx="8"/>
+  <text x="426" y="128" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11">PROJECTED OUTFLOWS</text>
+  <text x="426" y="158" fill="#f87171" font-family="system-ui, sans-serif" font-size="24" font-weight="700">-$980K</text>
+
+  <rect x="597" y="100" width="179" height="80" fill="rgba(201,162,39,0.15)" rx="8"/>
+  <text x="617" y="128" fill="#c9a227" font-family="system-ui, sans-serif" font-size="11">ENDING CASH (WK 13)</text>
+  <text x="617" y="158" fill="#c9a227" font-family="system-ui, sans-serif" font-size="24" font-weight="700">$1.07M</text>
+
+  <!-- Chart Area -->
+  <rect x="24" y="196" width="752" height="200" fill="rgba(255,255,255,0.03)" rx="8"/>
+
+  <!-- Y-axis labels -->
+  <text x="40" y="220" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="10">$1.2M</text>
+  <text x="40" y="270" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="10">$900K</text>
+  <text x="40" y="320" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="10">$600K</text>
+  <text x="40" y="370" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="10">$300K</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="216" x2="760" y2="216" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="80" y1="266" x2="760" y2="266" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="80" y1="316" x2="760" y2="316" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="80" y1="366" x2="760" y2="366" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Cash flow area chart -->
+  <path d="M80,300 L132,285 L184,275 L236,290 L288,260 L340,245 L392,255 L444,235 L496,220 L548,210 L600,225 L652,205 L704,195 L756,180"
+        fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80,300 L132,285 L184,275 L236,290 L288,260 L340,245 L392,255 L444,235 L496,220 L548,210 L600,225 L652,205 L704,195 L756,180 L756,380 L80,380 Z"
+        fill="url(#goldGrad)" fill-opacity="0.15"/>
+
+  <!-- Data points -->
+  <circle cx="80" cy="300" r="4" fill="#c9a227"/>
+  <circle cx="184" cy="275" r="4" fill="#c9a227"/>
+  <circle cx="288" cy="260" r="4" fill="#c9a227"/>
+  <circle cx="392" cy="255" r="4" fill="#c9a227"/>
+  <circle cx="496" cy="220" r="4" fill="#c9a227"/>
+  <circle cx="600" cy="225" r="4" fill="#c9a227"/>
+  <circle cx="704" cy="195" r="4" fill="#c9a227"/>
+  <circle cx="756" cy="180" r="6" fill="#c9a227" stroke="#fff" stroke-width="2"/>
+
+  <!-- X-axis labels -->
+  <text x="80" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W1</text>
+  <text x="184" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W3</text>
+  <text x="288" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W5</text>
+  <text x="392" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W7</text>
+  <text x="496" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W9</text>
+  <text x="600" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W11</text>
+  <text x="704" y="405" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">W13</text>
+
+  <!-- Bottom stats -->
+  <rect x="24" y="420" width="240" height="56" fill="rgba(255,255,255,0.05)" rx="8"/>
+  <text x="44" y="445" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11">MIN CASH (Week 4)</text>
+  <text x="44" y="465" fill="#f87171" font-family="system-ui, sans-serif" font-size="16" font-weight="600">$756,400</text>
+
+  <rect x="280" y="420" width="240" height="56" fill="rgba(255,255,255,0.05)" rx="8"/>
+  <text x="300" y="445" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11">AVG WEEKLY BURN</text>
+  <text x="300" y="465" fill="#fff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">$75,400</text>
+
+  <rect x="536" y="420" width="240" height="56" fill="rgba(52,211,153,0.1)" rx="8"/>
+  <text x="556" y="445" fill="#34d399" font-family="system-ui, sans-serif" font-size="11">RUNWAY</text>
+  <text x="556" y="465" fill="#34d399" font-family="system-ui, sans-serif" font-size="16" font-weight="600">14.2 months</text>
+</svg>
