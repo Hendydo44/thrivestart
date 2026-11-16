@@ -1,0 +1,559 @@
+/*
+ * ThriveStart - Home Services Landing Page Styles
+ * Page-specific styles for /hs/
+ */
+
+/* ================================
+   Hero Adjustments
+   ================================ */
+.hs-hero {
+    min-height: auto;
+    padding: 160px 0 100px;
+}
+
+.hs-hero .hero-content {
+    max-width: 800px;
+}
+
+.hs-hero h1 {
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-300);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* ================================
+   Problems Grid
+   ================================ */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.problem-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.problem-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.problem-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.problem-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+/* ================================
+   Offer Section
+   ================================ */
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.offer-card {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.offer-card h3 {
+    margin-bottom: 24px;
+    color: var(--navy);
+}
+
+.offer-card-highlight {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #fffdf5 0%, var(--white) 100%);
+}
+
+.offer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offer-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    color: var(--gray-700);
+}
+
+.offer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.offer-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.offer-card p {
+    color: var(--gray-600);
+    margin-bottom: 20px;
+}
+
+/* ================================
+   Steps Section
+   ================================ */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.step-card h3 {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.step-card p {
+    color: var(--gray-300);
+    margin: 0;
+}
+
+/* ================================
+   Industry Tabs
+   ================================ */
+.industry-tabs {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.industry-tab {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 4px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.industry-tab:hover {
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+.industry-tab.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+.industry-panel {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.industry-panel.active {
+    display: block;
+}
+
+.lever-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lever-list li {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+.lever-list li:last-child {
+    border-bottom: none;
+}
+
+.lever-list strong {
+    color: var(--navy);
+}
+
+.industry-note {
+    text-align: center;
+    color: var(--gray-500);
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* ================================
+   Scorecard
+   ================================ */
+.scorecard-container {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 48px;
+    box-shadow: var(--shadow-md);
+}
+
+.scorecard-form .form-group {
+    margin-bottom: 24px;
+}
+
+.scorecard-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.scorecard-form input,
+.scorecard-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--gray-700);
+    transition: var(--transition);
+}
+
+.scorecard-form input:focus,
+.scorecard-form select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-top: 6px;
+}
+
+/* Scorecard Results */
+.scorecard-results {
+    text-align: center;
+}
+
+.score-display {
+    margin-bottom: 40px;
+}
+
+.score-circle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    margin-bottom: 24px;
+}
+
+#scoreValue {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 1rem;
+    color: var(--gray-400);
+}
+
+.score-description {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cash-estimate {
+    background: linear-gradient(135deg, #fffdf5 0%, var(--white) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.estimate-label {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    margin-bottom: 8px;
+}
+
+.estimate-value {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--navy);
+    margin: 0 0 12px;
+}
+
+.estimate-disclaimer {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.callouts {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.callout-item {
+    background: var(--gray-50);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.callout-item:last-child {
+    margin-bottom: 0;
+}
+
+.callout-item p {
+    margin: 0;
+    color: var(--gray-700);
+    font-size: 0.95rem;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: 40px 0;
+}
+
+.results-cta {
+    text-align: left;
+}
+
+.results-cta h3 {
+    margin-bottom: 12px;
+}
+
+.results-cta > p {
+    color: var(--gray-600);
+    margin-bottom: 24px;
+}
+
+.results-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.results-form .form-group {
+    margin-bottom: 16px;
+}
+
+.results-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.results-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--gray-200);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.results-form input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-success p {
+    margin: 0;
+    color: #155724;
+    font-weight: 500;
+}
+
+.retake-btn {
+    margin-top: 24px;
+}
+
+/* ================================
+   About Section
+   ================================ */
+.about-content {
+    text-align: center;
+}
+
+.about-content h2 {
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.text-gray {
+    color: var(--gray-300);
+}
+
+/* ================================
+   Responsive Styles
+   ================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hs-hero {
+        padding: 120px 0 80px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .problems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .step-card {
+        padding: 32px 24px;
+    }
+
+    .industry-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .scorecard-container {
+        padding: 32px 24px;
+    }
+
+    .results-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hs-hero {
+        padding: 100px 0 60px;
+    }
+
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-card {
+        padding: 24px 20px;
+    }
+
+    .offer-card {
+        padding: 28px;
+    }
+
+    .scorecard-container {
+        padding: 24px 20px;
+    }
+
+    .score-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    #scoreValue {
+        font-size: 3rem;
+    }
+
+    .estimate-value {
+        font-size: 2rem;
+    }
+}
+
+/* ================================
+   Landing page chrome (no site nav)
+   ================================ */
+.lp-nav .container { display: flex; justify-content: space-between; align-items: center; }
+.lp-nav .logo { cursor: default; }
+.lp-nav-cta { padding: 10px 20px; font-size: 0.95rem; }
+
+.lp-footer { padding: 40px 0; }
+.lp-footer .container {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.lp-footer .logo { cursor: default; }
+.lp-footer p { color: var(--gray-500); font-size: 0.9rem; margin: 0; }
