@@ -32,35 +32,39 @@
 .problems-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 0;
+    border-top: 1px solid var(--navy);
+    counter-reset: prob;
 }
 
 .problem-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 8px;
-    padding: 32px 24px;
-    text-align: center;
-    transition: var(--transition);
+    counter-increment: prob;
+    padding: 32px 28px 32px 0;
+    border-bottom: 1px solid rgba(10, 22, 40, 0.12);
+    text-align: left;
 }
 
-.problem-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+.problem-card:not(:nth-child(3n+1)) {
+    padding-left: 28px;
+    border-left: 1px solid rgba(10, 22, 40, 0.12);
 }
 
-.problem-icon {
-    font-size: 2rem;
+.problem-card::before {
+    content: counter(prob, decimal-leading-zero);
     display: block;
-    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--gold-dark);
+    margin-bottom: 18px;
 }
 
 .problem-card p {
     margin: 0;
-    font-size: 1rem;
-    color: var(--gray-700);
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    color: var(--navy);
 }
 
 /* ================================
@@ -107,11 +111,13 @@
 }
 
 .offer-list li::before {
-    content: "✓";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--gold);
-    font-weight: 700;
+    top: 0.8em;
+    width: 14px;
+    height: 1px;
+    background: var(--gold-dark);
 }
 
 .offer-card p {
@@ -476,6 +482,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .problem-card:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+    .problem-card:nth-child(even) { padding-left: 24px; border-left: 1px solid rgba(10, 22, 40, 0.12); }
+
     .offer-grid {
         grid-template-columns: 1fr;
     }
@@ -518,8 +527,10 @@
         grid-template-columns: 1fr;
     }
 
-    .problem-card {
-        padding: 24px 20px;
+    .problem-card,
+    .problem-card:nth-child(even) {
+        padding: 24px 0;
+        border-left: 0;
     }
 
     .offer-card {

@@ -16,7 +16,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/v2.css">
 
@@ -59,27 +59,30 @@
         .about-hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: center; }
         .about-hero .founder-photo { max-width: 380px; margin-left: auto; font-size: 6rem; border: 1px solid var(--navy-lighter); }
         .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 8px; }
-        .stat { border-top: 2px solid var(--gold); padding-top: 18px; }
+        .stat { border-top: 1px solid var(--navy); padding-top: 20px; }
         .stat .n { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--navy); line-height: 1; }
-        .stat .l { color: var(--gray-500); font-size: 0.95rem; margin-top: 8px; }
+        .stat .l { color: var(--gray-500); font-size: 0.92rem; margin-top: 10px; }
         .story { max-width: 760px; margin: 0 auto; }
         .story p { font-size: 1.15rem; line-height: 1.85; margin-bottom: 22px; color: var(--gray-700); }
         .story p:first-of-type::first-letter { font-family: var(--font-display); float: left; font-size: 4.2rem; line-height: 0.9; padding: 6px 12px 0 0; color: var(--gold-dark); }
         .story h2 { margin: 56px 0 20px; font-size: clamp(1.7rem, 3vw, 2.2rem); }
-        .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
-        .principle { background: var(--white); border: 1px solid var(--gray-200); border-radius: 14px; padding: 30px; }
-        .principle h3 { font-size: 1.35rem; margin-bottom: 8px; }
+        .principles { display: grid; grid-template-columns: 1fr 1fr; margin-top: 56px; border-top: 1px solid var(--navy); counter-reset: pr; }
+        .principle { padding: 34px 40px 30px 0; border-bottom: 1px solid var(--rule); counter-increment: pr; }
+        .principle:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--rule); }
+        .principle::before { content: counter(pr, decimal-leading-zero); display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--gold-dark); margin-bottom: 14px; }
+        .principle h3 { font-size: 1.6rem; margin-bottom: 10px; }
         .principle p { color: var(--gray-600); font-size: 1rem; }
-        .bio-box { background: var(--white); border: 1px solid var(--gray-200); border-radius: 14px; padding: 28px 30px; margin-top: 20px; position: relative; }
-        .bio-box h3 { font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); font-weight: 700; margin-bottom: 12px; }
+        .bio-box { background: var(--white); border: 1px solid var(--rule); border-radius: 6px; padding: 28px 30px; margin-top: 20px; position: relative; }
+        .bio-box h3 { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); font-weight: 700; margin-bottom: 12px; }
         .bio-box p { color: var(--gray-700); font-size: 1rem; line-height: 1.75; }
-        .copy-btn { position: absolute; top: 20px; right: 20px; background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 6px; padding: 6px 12px; font: 600 0.85rem var(--font-body); color: var(--navy); cursor: pointer; }
+        .copy-btn { position: absolute; top: 20px; right: 20px; background: var(--white); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--mono) !important; letter-spacing: .04em; padding: 6px 12px; font: 600 0.85rem var(--font-body); color: var(--navy); cursor: pointer; }
         .copy-btn:hover { border-color: var(--gold); }
         @media (max-width: 960px) {
             .about-hero { grid-template-columns: 1fr; gap: 40px; }
             .about-hero .founder-photo { margin: 0; max-width: 260px; }
             .stats-row { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
             .principles { grid-template-columns: 1fr; }
+            .principle, .principle:nth-child(even) { padding: 28px 0; border-left: 0; }
         }
         @media (max-width: 480px) {
             .bio-box { padding: 24px 20px; }
@@ -105,14 +108,14 @@
     </nav>
 
     <!-- Hero -->
-    <section class="v2-hero">
+    <section class="v2-hero" style="padding-bottom: 110px !important;">
         <div class="container">
             <div class="about-hero">
                 <div>
-                    <span class="eyebrow">About the founder</span>
-                    <h1>I've been the buyer. <em>Then I ran the business after the wire.</em></h1>
-                    <p class="sub" style="margin-bottom: 36px;">I'm Carter Henderson. I've spent 10 years in private equity and M&amp;A, acquiring local, owner-operated businesses and building the finance functions behind them from scratch. I started ThriveStart to give first-time buyers and established owners the same operator-grade finance that PE firms pay for.</p>
-                    <div class="hero-buttons">
+                    <span class="eyebrow rise">About the founder</span>
+                    <h1 class="rise d1">I've been the buyer. <em>Then I ran the business after the wire.</em></h1>
+                    <p class="sub rise d2" style="margin-bottom: 36px;">I'm Carter Henderson. I've spent 10 years in private equity and M&amp;A, acquiring local, owner-operated businesses and building the finance functions behind them from scratch. I started ThriveStart to give first-time buyers and established owners the same operator-grade finance that PE firms pay for.</p>
+                    <div class="hero-buttons rise d3">
                         <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary">Book a call with me
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
@@ -120,7 +123,7 @@
                     </div>
                 </div>
                 <!-- TODO: replace initials with a headshot: <img src="/images/carter.jpg" alt="Carter Henderson"> -->
-                <div class="founder-photo">CH</div>
+                <div class="founder-photo rise d3">CH</div>
             </div>
         </div>
     </section>
@@ -128,10 +131,10 @@
     <!-- Stats -->
     <section class="bg-white" style="padding-bottom: 40px;">
         <div class="container">
-            <div class="stats-row">
-                <div class="stat"><div class="n">10 yrs</div><div class="l">in private equity and M&amp;A</div></div>
-                <div class="stat"><div class="n">$350M+</div><div class="l">in transaction value</div></div>
-                <div class="stat"><div class="n">40+</div><div class="l">deals closed</div></div>
+            <div class="stats-row stagger">
+                <div class="stat"><div class="n"><span data-count="10" data-suffix=" yrs">10 yrs</span></div><div class="l">in private equity and M&amp;A</div></div>
+                <div class="stat"><div class="n"><span data-count="350" data-prefix="$" data-suffix="M+">$350M+</span></div><div class="l">in transaction value</div></div>
+                <div class="stat"><div class="n"><span data-count="40" data-suffix="+">40+</span></div><div class="l">deals closed</div></div>
                 <div class="stat"><div class="n">0 &rarr; 1</div><div class="l">finance functions built from scratch</div></div>
             </div>
         </div>
@@ -140,7 +143,7 @@
     <!-- Story -->
     <section class="bg-white" style="padding-top: 60px;">
         <div class="container">
-            <div class="story">
+            <div class="story reveal">
                 <p>Most advisors leave the day a deal closes. I've spent my career on both sides of that day. I've built the models, run the diligence, and negotiated the seller notes. Then I stayed for the hard part: integrating the business, getting its books closed every month, and making the numbers in the investment memo actually show up.</p>
                 <p>Much of my work has been acquiring local, owner-operated companies. Many had been around for 20 years or more, with great customers, loyal crews, and almost no financial infrastructure. I've sat across the table from those owners at the LOI, and I've been the one rebuilding their finances after we closed: building a finance function from the ground up, standing up the monthly close, and integrating each new business into it.</p>
                 <p>That work taught me two things. First, first-time buyers almost never lose money because they picked the wrong company. They lose it on add-backs that don't hold up, working capital pegs set too low, and debt that only works if nothing goes wrong. Second, the best local businesses are often worth far more than their owners realize, but messy books make buyers discount them.</p>
@@ -159,11 +162,11 @@
     <!-- Principles -->
     <section class="bg-cream">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 0;">
+            <div class="section-header reveal" style="margin-bottom: 0;">
                 <span class="eyebrow">How I work</span>
                 <h2>Four promises to every client</h2>
             </div>
-            <div class="principles">
+            <div class="principles stagger">
                 <div class="principle">
                     <h3>You work with me.</h3>
                     <p>No partner who sells the work and then hands it to a junior analyst. The person on the first call does the work.</p>
@@ -191,22 +194,20 @@
                 <span class="eyebrow">Who I work with</span>
                 <h2>Two kinds of clients, one playbook</h2>
             </div>
-            <div class="paths" style="margin: 0 auto;">
+            <div class="paths reveal" style="margin: 0 auto;">
                 <a href="/independent-sponsors/" class="path-card">
+                    <span class="idx" aria-hidden="true">01</span>
                     <span class="who">Independent sponsors &amp; searchers</span>
                     <h2>Buying a business</h2>
                     <p>Deal teardown, lender package, structure, diligence, and the first 100 days.</p>
-                    <span class="go">See how I run your deal
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </span>
+                    <span class="go">See how I run your deal <i></i></span>
                 </a>
                 <a href="/business-owners/" class="path-card">
+                    <span class="idx" aria-hidden="true">02</span>
                     <span class="who">Owners of $10M+ companies</span>
                     <h2>Running a business</h2>
                     <p>Automated books, a real cash forecast, margin visibility, and a monthly CFO.</p>
-                    <span class="go">See what I automate
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </span>
+                    <span class="go">See what I automate <i></i></span>
                 </a>
             </div>
         </div>
@@ -220,12 +221,12 @@
                 <h2>Bio</h2>
                 <p>Feel free to use either version.</p>
             </div>
-            <div class="bio-box">
+            <div class="bio-box reveal">
                 <button class="copy-btn" data-copy="bio-short" type="button">Copy</button>
                 <h3>Short bio &middot; 50 words</h3>
                 <p id="bio-short">Carter Henderson is the founder of ThriveStart, which provides M&amp;A advisory to independent sponsors and AI-driven finance automation to established businesses. He has spent 10 years in private equity and M&amp;A, has worked on 40+ transactions totaling $350M+. He has acquired and integrated local, owner-operated businesses and built finance functions from the ground up.</p>
             </div>
-            <div class="bio-box">
+            <div class="bio-box reveal">
                 <button class="copy-btn" data-copy="bio-long" type="button">Copy</button>
                 <h3>Full bio &middot; 130 words</h3>
                 <p id="bio-long">Carter Henderson is the founder of ThriveStart, a firm that helps first-time independent sponsors buy companies and helps established, owner-operated businesses build the finance function they never had. Carter has spent 10 years in private equity and M&amp;A and has worked on more than 40 transactions totaling over $350 million. His experience spans acquiring long-established, owner-operated companies and building the finance functions behind them, from diligence and deal structuring through integration and monthly financial reporting. He is known for putting AI to practical use in M&amp;A and finance operations, using AI-assisted workflows to compress diligence and automate the monthly close. Carter works with independent sponsors, search fund operators, and owners of $10M+ businesses across the United States.</p>
@@ -235,7 +236,7 @@
 
     <!-- Final CTA -->
     <section class="final">
-        <div class="container">
+        <div class="container reveal">
             <h2>Let's talk about your deal or your numbers.</h2>
             <p>A 15-minute call with me directly. You'll leave with a clear next step whether or not we work together.</p>
             <div class="btns">
@@ -298,6 +299,7 @@
     </a>
 
     <script src="/js/main.js"></script>
+    <script src="/js/motion.js"></script>
     <script>
         document.querySelectorAll('.copy-btn').forEach(btn => {
             btn.addEventListener('click', async () => {

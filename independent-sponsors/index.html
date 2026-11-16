@@ -16,7 +16,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/v2.css">
 
@@ -80,35 +80,42 @@
     <!-- Hero -->
     <section class="v2-hero">
         <div class="container">
-            <span class="eyebrow">For independent sponsors &amp; searchers</span>
-            <h1>Close your first deal <em>like it's your tenth.</em></h1>
-            <p class="sub">A senior deal partner from LOI to close and through the first 100 days. We find what the seller's numbers are hiding, build the package lenders fund, and structure the deal so it pays you back.</p>
-            <div class="hero-buttons">
+            <span class="eyebrow rise">For independent sponsors &amp; searchers</span>
+            <h1 class="rise d1">Close your first deal <em>like it's your tenth.</em></h1>
+            <p class="sub rise d2">A senior deal partner from LOI to close and through the first 100 days. We find what the seller's numbers are hiding, build the package lenders fund, and structure the deal so it pays you back.</p>
+            <div class="hero-buttons rise d3">
                 <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary">Book a free deal teardown
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#process" class="btn btn-ghost">See the process</a>
             </div>
+        </div>
+        <div class="ticker rise d4" aria-hidden="true" style="margin-top: 0;">
+            <div class="ticker-track">
+                <span>LOI review</span><span>Proof of cash</span><span>Add-back testing</span><span>Customer concentration</span><span>Debt sizing</span><span>DSCR</span><span>Seller note</span><span>Earnout</span><span>Working capital peg</span><span>Escrow</span><span>Funds flow</span><span>Day-one cash</span>
+            </div>
+        </div>
+        <div class="container">
             <div class="proof">
-                <div><strong>$350M+</strong>in transactions</div>
-                <div><strong>40+</strong>deals closed</div>
+                <div><strong data-count="350" data-prefix="$" data-suffix="M+">$350M+</strong>in transactions</div>
+                <div><strong data-count="40" data-suffix="+">40+</strong>deals closed</div>
                 <div><strong>24 hr</strong>to your data room</div>
-                <div><strong>$2M&ndash;$20M</strong>enterprise value sweet spot</div>
+                <div><strong>$2&ndash;20M</strong>enterprise value sweet spot</div>
             </div>
         </div>
     </section>
 
     <!-- Problem -->
-    <section class="bg-white">
+    <section>
         <div class="container">
             <div class="pillar">
-                <div>
+                <div class="reveal">
                     <span class="eyebrow">The first-deal problem</span>
                     <h2>Everyone at the table has done this before. Except you.</h2>
                     <p class="lead">The seller has a broker. The lender has a credit committee. Your investors have seen a hundred deals. You have a signed LOI, a 60-day exclusivity clock, and a lot riding on getting it right.</p>
                     <p class="lead">Most first-time sponsors don't lose deals because they picked the wrong company. They lose money on <strong>add-backs that don't survive diligence</strong>, a <strong>peg set too low</strong>, a <strong>seller note that strangles cash</strong>, and a <strong>first year with no real finance function</strong>.</p>
                 </div>
-                <div class="voice">
+                <div class="voice stagger">
                     <div class="tag">Where first deals go wrong</div>
                     <p class="q"><span>$400K</span> of &ldquo;owner add-backs&rdquo; that are really a GM's salary</p>
                     <p class="q">A working capital peg that hands the seller <span>a month of cash</span></p>
@@ -119,63 +126,56 @@
         </div>
     </section>
 
-    <!-- Process -->
-    <section class="bg-cream" id="process">
+    <!-- Process: sticky timeline -->
+    <section class="bg-white" id="process">
         <div class="container">
-            <div class="section-header-left" style="max-width: 760px;">
+            <div class="reveal" style="max-width: 760px;">
                 <span class="eyebrow">LOI to close and beyond</span>
                 <h2>Here's exactly what we do, and when.</h2>
-                <p class="lead">One senior partner runs the whole thing. You stay focused on the seller, your investors, and your lender.</p>
+                <p class="lead" style="margin-top: 20px;">One senior partner runs the whole thing. You stay focused on the seller, your investors, and your lender.</p>
             </div>
-            <div class="timeline">
-                <div class="step">
-                    <div class="dot">1</div>
-                    <div class="when">Days 1&ndash;5</div>
-                    <div>
+            <div class="tl">
+                <aside class="tl-rail" aria-hidden="true">
+                    <div class="tl-count"><b>01</b><small> / 05</small></div>
+                    <div class="tl-when"></div>
+                    <div class="tl-name"></div>
+                    <div class="tl-track"><div class="tl-fill"></div></div>
+                </aside>
+                <div class="tl-steps">
+                    <div class="tl-step" data-when="Days 1&ndash;5" data-name="Deal teardown">
+                        <div class="m">01 &middot; Days 1&ndash;5</div>
                         <h3>Deal teardown</h3>
                         <p>We rebuild the P&amp;L from the general ledger and bank statements, test every add-back, and check revenue quality and customer concentration. You learn what a QoE will find before you spend $30K+ on one.</p>
-                        <div class="out"><b>You get:</b> rebuilt P&amp;L, adjusted EBITDA bridge, red-flag memo, go / renegotiate / walk call</div>
+                        <div class="out"><span>Rebuilt P&amp;L</span><span>EBITDA bridge</span><span>Red-flag memo</span><span>Go / renegotiate / walk</span></div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="dot">2</div>
-                    <div class="when">Week 2</div>
-                    <div>
+                    <div class="tl-step" data-when="Week 2" data-name="Model &amp; lender package">
+                        <div class="m">02 &middot; Week 2</div>
                         <h3>Model &amp; lender package</h3>
                         <p>An underwriting model your lender can audit in an hour: debt sizing, DSCR, sources &amp; uses, and downside cases. Then a lender deck targeted at the SBA and cash-flow lenders who actually fund your profile.</p>
-                        <div class="out"><b>You get:</b> underwriting model, lender deck, investor memo, lender shortlist</div>
+                        <div class="out"><span>Underwriting model</span><span>Lender deck</span><span>Investor memo</span><span>Lender shortlist</span></div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="dot">3</div>
-                    <div class="when">Weeks 2&ndash;6</div>
-                    <div>
+                    <div class="tl-step" data-when="Weeks 2&ndash;6" data-name="Structure &amp; negotiate">
+                        <div class="m">03 &middot; Weeks 2&ndash;6</div>
                         <h3>Structure &amp; negotiate</h3>
                         <p>Seller note, earnout, rollover equity, working capital peg, escrow. Each one modeled for what it does to your cash in year one, and defended at the table with the seller and their broker.</p>
-                        <div class="out"><b>You get:</b> structure scenarios, peg analysis, negotiation positions, term sheet scorecard</div>
+                        <div class="out"><span>Structure scenarios</span><span>Peg analysis</span><span>Negotiation positions</span><span>Term sheet scorecard</span></div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="dot">4</div>
-                    <div class="when">Weeks 3&ndash;10</div>
-                    <div>
+                    <div class="tl-step" data-when="Weeks 3&ndash;10" data-name="Diligence quarterback">
+                        <div class="m">04 &middot; Weeks 3&ndash;10</div>
                         <h3>Diligence quarterback</h3>
                         <p>Request lists, data room, QoE firm, attorneys, insurance, and lender conditions, all run on one tracker with one owner so nothing slips and your exclusivity window doesn't burn.</p>
-                        <div class="out"><b>You get:</b> diligence tracker, weekly status, issues list tied back to price</div>
+                        <div class="out"><span>Diligence tracker</span><span>Weekly status</span><span>Issues list tied to price</span></div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="dot">5</div>
-                    <div class="when">Close + 100 days</div>
-                    <div>
+                    <div class="tl-step" data-when="Close + 100 days" data-name="Close &amp; take control">
+                        <div class="m">05 &middot; Close + 100 days</div>
                         <h3>Close &amp; take control</h3>
                         <p>Funds flow, day-one cash plan, and a 13-week forecast. Then we stand up monthly close, a KPI pack, and the board reporting your investors expect, automated from the start.</p>
-                        <div class="out"><b>You get:</b> funds flow, 13-week cash forecast, KPI dashboard, monthly board pack</div>
+                        <div class="out"><span>Funds flow</span><span>13-week cash</span><span>KPI dashboard</span><span>Monthly board pack</span></div>
                     </div>
                 </div>
             </div>
 
-            <div class="offer">
+            <div class="offer reveal">
                 <div>
                     <h3>Bring your CIM. Get a free 30-minute deal teardown.</h3>
                     <p>Send the CIM or the seller's P&amp;L before the call. We'll walk through what looks real, what doesn't, and the three questions you should be asking the seller this week.</p>
@@ -193,24 +193,60 @@
         </div>
     </section>
 
-    <!-- Deliverables -->
-    <section class="bg-white">
+    <!-- Work product -->
+    <section>
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="eyebrow">The work product</span>
                 <h2>Built to survive a credit committee</h2>
                 <p>Real models and real packages, the kind lenders and investors expect from experienced sponsors.</p>
             </div>
-            <div class="thumbs">
-                <div class="thumb">
-                    <img src="/images/deliverables/deal-model.svg" alt="Deal structuring model showing purchase price, earnout scenarios, and working capital analysis" loading="lazy">
-                    <h3>Deal structuring model</h3>
-                    <p>Seller note, earnout, and peg scenarios side by side, with year-one cash impact.</p>
+            <div class="pillar" style="margin-top: 64px; align-items: start;">
+                <div class="reveal">
+                    <div class="doc">
+                        <div class="doc-head"><span class="doc-title">Sources &amp; uses &middot; at close</span><span class="doc-meta">$ millions</span></div>
+                        <div class="su">
+                            <div>
+                                <h4>Sources</h4>
+                                <div class="su-row"><span>Senior debt (SBA 7(a))</span><span>4.70</span></div>
+                                <div class="su-row"><span>Seller note</span><span>1.10</span></div>
+                                <div class="su-row"><span>Sponsor &amp; LP equity</span><span>2.05</span></div>
+                                <div class="su-row tot"><span>Total</span><span>7.85</span></div>
+                                <div class="su-bar"><i style="width:60%;background:var(--navy)"></i><i style="width:14%;background:var(--gold)"></i><i style="width:26%;background:var(--gray-300)"></i></div>
+                            </div>
+                            <div>
+                                <h4>Uses</h4>
+                                <div class="su-row"><span>Purchase price (4.5x)</span><span>7.29</span></div>
+                                <div class="su-row"><span>Working capital</span><span>0.25</span></div>
+                                <div class="su-row"><span>Fees &amp; closing</span><span>0.31</span></div>
+                                <div class="su-row tot"><span>Total</span><span>7.85</span></div>
+                            </div>
+                        </div>
+                        <div class="kpis">
+                            <div><div class="k">Senior leverage</div><div class="v">2.9x</div></div>
+                            <div><div class="k">Total leverage</div><div class="v">3.6x</div></div>
+                            <div><div class="k">Year-1 DSCR</div><div class="v">1.45x</div></div>
+                        </div>
+                        <div class="doc-foot"><span>Downside case: <b>DSCR holds above 1.25x at &minus;15% revenue</b></span><span>Illustrative</span></div>
+                    </div>
                 </div>
-                <div class="thumb">
-                    <img src="/images/deliverables/lender-deck.svg" alt="Lender deck page showing company overview, use of funds, and projections" loading="lazy">
-                    <h3>Lender package</h3>
-                    <p>Underwriting model plus a deck that answers the credit committee's questions before they ask.</p>
+                <div class="reveal">
+                    <div class="doc" data-anim="bridge">
+                        <div class="doc-head"><span class="doc-title">EBITDA bridge &middot; Target Co.</span><span class="doc-meta">$ millions &middot; axis from 1.20</span></div>
+                        <div class="doc-body">
+                            <div class="bridge-chart">
+                                <div class="bc-col" style="--b:0%;--h:90%"><div class="bc-bar"></div><div class="bc-val">2.10</div></div>
+                                <div class="bc-col neg" style="--b:66%;--h:24%"><div class="bc-bar"></div><div class="bc-val">&minus;0.24</div></div>
+                                <div class="bc-col neg" style="--b:54%;--h:12%"><div class="bc-bar"></div><div class="bc-val">&minus;0.12</div></div>
+                                <div class="bc-col neg" style="--b:42%;--h:12%"><div class="bc-bar"></div><div class="bc-val">&minus;0.12</div></div>
+                                <div class="bc-col total" style="--b:0%;--h:42%"><div class="bc-bar"></div><div class="bc-val">1.62</div></div>
+                            </div>
+                            <div class="bc-labels">
+                                <span>Seller's adjusted EBITDA</span><span>&ldquo;One-time&rdquo; costs that recur</span><span>GM role to backfill</span><span>Revenue timing</span><span>What a lender will underwrite</span>
+                            </div>
+                        </div>
+                        <div class="doc-foot"><span>Price at 4.5x: <b>$9.45M &rarr; $7.29M</b></span><span>Illustrative</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,29 +255,49 @@
     <!-- AI -->
     <section class="bg-navy">
         <div class="container">
-            <div class="pillar">
-                <div>
+            <div class="ai-split">
+                <div class="reveal">
                     <span class="eyebrow">The AI advantage</span>
                     <h2>AI reads the ledger. We read the deal.</h2>
-                    <p class="lead">We use AI to work through three years of transactions, bank statements, and customer lists in hours instead of weeks. You get a faster read on the deal at a fraction of the usual cost, and senior judgment goes into the questions that actually move price.</p>
+                    <p class="lead" style="margin-bottom: 32px;">We use AI to work through three years of transactions, bank statements, and customer lists in hours instead of weeks. You get a faster read on the deal at a fraction of the usual cost, and senior judgment goes into the questions that actually move price.</p>
+                    <ul class="checks">
+                        <li><span><strong>Proof of cash.</strong> Bank deposits tied to reported revenue, month by month.</span></li>
+                        <li><span><strong>Add-back testing.</strong> Every adjustment traced to the transactions behind it.</span></li>
+                        <li><span><strong>Customer analysis.</strong> Concentration, churn, and retention from raw billing data.</span></li>
+                        <li><span><strong>Cost benchmarking.</strong> The target's cost lines against how the business should run.</span></li>
+                    </ul>
                 </div>
-                <ul class="checks">
-                    <li><strong>Proof of cash.</strong> Bank deposits tied to reported revenue, month by month.</li>
-                    <li><strong>Add-back testing.</strong> Every adjustment traced to the transactions behind it.</li>
-                    <li><strong>Customer analysis.</strong> Concentration, churn, and cohort retention from raw billing data.</li>
-                    <li><strong>Cost benchmarking.</strong> The target's cost lines compared against how the business should run.</li>
-                </ul>
+                <div class="reveal">
+                    <div class="doc ledger" data-anim="scan">
+                        <div class="doc-head"><span class="doc-title">GL review &middot; add-back testing</span><span class="doc-meta">2,814 transactions scanned</span></div>
+                        <div class="ledger-wrap">
+                            <table>
+                                <thead><tr><th>Date</th><th>Item</th><th class="amt">Amount</th><th>Our read</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="d">01/14</td><td>Owner vehicle lease<span class="why">Personal use, ends at close</span></td><td class="amt">18,400</td><td><span class="pill ok">Accept</span></td></tr>
+                                    <tr><td class="d">03/31</td><td>Legal settlement<span class="why">Single dispute, closed</span></td><td class="amt">45,000</td><td><span class="pill ok">Accept</span></td></tr>
+                                    <tr><td class="d">06/30</td><td>GM &ldquo;one-time&rdquo; bonus<span class="why">Paid every year since 2021</span></td><td class="amt">62,000</td><td><span class="pill no">Recurring</span></td></tr>
+                                    <tr><td class="d">08/15</td><td>Owner's son, payroll<span class="why">Role must be backfilled at ~$48K</span></td><td class="amt">71,500</td><td><span class="pill part">Partial</span></td></tr>
+                                    <tr><td class="d">10/02</td><td>Truck &amp; equipment repairs<span class="why">Normal maintenance, not one-time</span></td><td class="amt">34,200</td><td><span class="pill no">Recurring</span></td></tr>
+                                    <tr><td class="d">12/20</td><td>Annual plan prepayments<span class="why">Booked as revenue up front</span></td><td class="amt">120,000</td><td><span class="pill no">Timing</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="doc-foot"><span>Showing 6 of <b>41 flagged items</b></span><span>Illustrative</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="bg-cream">
+    <section>
         <div class="container">
-            <div class="section-header" style="margin-bottom: 0;">
+            <div class="section-header reveal">
+                <span class="eyebrow">FAQ</span>
                 <h2>Questions sponsors ask us</h2>
             </div>
-            <div class="faq-list">
+            <div class="faq-list reveal">
                 <details>
                     <summary>Do you replace a QoE provider?</summary>
                     <p>Usually not. Most lenders require a third-party QoE. We make sure you walk into it knowing what it will find, scope it so you aren't overpaying, and turn its findings into price and structure changes.</p>
@@ -268,7 +324,8 @@
 
     <!-- Final CTA -->
     <section class="final">
-        <div class="container">
+        <div class="container reveal">
+            <span class="eyebrow">Exclusivity is ticking</span>
             <h2>Have a deal under LOI? Let's look at it this week.</h2>
             <p>Every week of exclusivity matters. Book a teardown and we'll tell you what we see in 30 minutes.</p>
             <div class="btns">
@@ -333,5 +390,6 @@
     </a>
 
     <script src="/js/main.js"></script>
+    <script src="/js/motion.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/v2.css">
 
@@ -80,34 +80,42 @@
     <!-- Hero -->
     <section class="v2-hero">
         <div class="container">
-            <span class="eyebrow">For established $10M+ businesses</span>
-            <h1>Twenty years building the business. <em>Time the numbers caught up.</em></h1>
-            <p class="sub">The finance team you never had, without the $300K CFO salary. We automate the back office with AI, give you a real view of cash and margin, and sit down with you every month to decide what to do about it.</p>
-            <div class="hero-buttons">
+            <span class="eyebrow rise">For established $10M+ businesses</span>
+            <h1 class="rise d1">Twenty years building the business. <em>Time the numbers caught up.</em></h1>
+            <p class="sub rise d2">The finance team you never had, without the $300K CFO salary. We automate the back office with AI, give you a real view of cash and margin, and sit down with you every month to decide what to do about it.</p>
+            <div class="hero-buttons rise d3">
                 <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary">Get a free finance assessment
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#before-after" class="btn btn-ghost">See what changes</a>
             </div>
+        </div>
+        <div class="ticker rise d4" aria-hidden="true" style="margin-top: 0;">
+            <div class="ticker-track">
+                <span>Bank feeds</span><span>AI categorization</span><span>Bill capture</span><span>Approval workflows</span><span>Invoice reminders</span><span>13-week cash</span><span>Job costing</span><span>Crew margin</span><span>Monday flash report</span><span>Monthly close</span><span>Exit readiness</span>
+            </div>
+        </div>
+        <div class="container">
             <div class="proof">
-                <div><strong>90 days</strong>to a finance function that runs itself</div>
-                <div><strong>Works with</strong>QuickBooks, Xero &amp; your field software</div>
+                <div><strong data-count="90" data-suffix=" days">90 days</strong>to a finance function that runs itself</div>
+                <div><strong>10 days</strong>to close the books each month</div>
+                <div><strong>No switch</strong>works with QuickBooks, Xero &amp; your field software</div>
                 <div><strong>30-day</strong>money-back guarantee</div>
             </div>
         </div>
     </section>
 
     <!-- Problem -->
-    <section class="bg-white">
+    <section>
         <div class="container">
             <div class="pillar">
-                <div>
+                <div class="reveal">
                     <span class="eyebrow">The growth gap</span>
                     <h2>The business outgrew the back office. Nobody's to blame.</h2>
                     <p class="lead">Your bookkeeper is working harder than ever. Your CPA files the taxes. But at $10M, $20M, or $40M, the business is more complicated than a bookkeeper and a tax return can handle. More effort won't close that gap. Better systems will.</p>
                     <p class="lead">Meanwhile, the stakes keep rising: bigger payrolls, bank covenants, a second location, a key employee asking about equity, and buyers calling about whether you'd ever sell.</p>
                 </div>
-                <div class="voice">
+                <div class="voice stagger">
                     <div class="tag">Sound familiar?</div>
                     <p class="q">&ldquo;We don't see last month's P&amp;L until <span>the middle of this month</span>.&rdquo;</p>
                     <p class="q">&ldquo;Revenue was a record. So <span>where's the cash?</span>&rdquo;</p>
@@ -119,35 +127,44 @@
     </section>
 
     <!-- Before / After -->
-    <section class="bg-cream" id="before-after">
+    <section class="bg-white" id="before-after">
         <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">What changes in 90 days</span>
-                <h2>From gut feel to full control</h2>
-                <p>Same team, same software you already pay for. Different results.</p>
-            </div>
-            <div class="ba">
-                <div class="ba-row ba-head"><div class="k"></div><div class="b">Today</div><div class="a">With ThriveStart</div></div>
-                <div class="ba-row"><div class="k">Monthly books</div><div class="b">Ready 4&ndash;6 weeks after month-end</div><div class="a">Closed within 10 business days</div></div>
-                <div class="ba-row"><div class="k">Cash</div><div class="b">Check the bank balance and hope</div><div class="a">13-week forecast, updated every week</div></div>
-                <div class="ba-row"><div class="k">Bills &amp; AP</div><div class="b">Paper, email, and manual entry</div><div class="a">Captured, coded, and routed for approval automatically</div></div>
-                <div class="ba-row"><div class="k">Collections</div><div class="b">Chasing checks by phone</div><div class="a">Automated reminders and a weekly AR action list</div></div>
-                <div class="ba-row"><div class="k">Profitability</div><div class="b">Total company only</div><div class="a">Margin by customer, job, crew, and location</div></div>
-                <div class="ba-row"><div class="k">Reporting</div><div class="b">A P&amp;L nobody reads</div><div class="a">One-page dashboard on your phone every Monday</div></div>
-                <div class="ba-row"><div class="k">Selling someday</div><div class="b">Buyers discount messy books</div><div class="a">Clean, QoE-ready numbers that defend your price</div></div>
+            <div class="ba-wrap" data-anim="ba">
+                <div class="pillar" style="align-items: end;">
+                    <div class="reveal">
+                        <span class="eyebrow">What changes in 90 days</span>
+                        <h2>From gut feel to full control</h2>
+                    </div>
+                    <div class="reveal" style="text-align: right;">
+                        <div class="seg" role="group" aria-label="Compare before and after">
+                            <span class="knob" aria-hidden="true"></span>
+                            <button type="button" data-ba="b" aria-pressed="true">Today</button>
+                            <button type="button" data-ba="a" aria-pressed="false">With ThriveStart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ba-list stagger">
+                    <div class="ba-item"><div class="k">Monthly books</div><div class="v"><span class="b">Ready 4&ndash;6 weeks after month-end</span><span class="a">Closed within 10 business days</span></div></div>
+                    <div class="ba-item"><div class="k">Cash</div><div class="v"><span class="b">Check the bank balance and hope</span><span class="a">13-week forecast, updated every week</span></div></div>
+                    <div class="ba-item"><div class="k">Bills &amp; AP</div><div class="v"><span class="b">Paper, email, and manual entry</span><span class="a">Captured, coded, and routed for approval automatically</span></div></div>
+                    <div class="ba-item"><div class="k">Collections</div><div class="v"><span class="b">Chasing checks by phone</span><span class="a">Automated reminders and a weekly AR action list</span></div></div>
+                    <div class="ba-item"><div class="k">Profitability</div><div class="v"><span class="b">Total company only</span><span class="a">Margin by customer, job, crew, and location</span></div></div>
+                    <div class="ba-item"><div class="k">Reporting</div><div class="v"><span class="b">A P&amp;L nobody reads</span><span class="a">One-page flash report on your phone every Monday</span></div></div>
+                    <div class="ba-item"><div class="k">Selling someday</div><div class="v"><span class="b">Buyers discount messy books</span><span class="a">Clean, QoE-ready numbers that defend your price</span></div></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Method -->
-    <section class="bg-white">
+    <section>
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="eyebrow">How it works</span>
                 <h2>Automate. Install. Advise.</h2>
                 <p>We build it once, it runs every month, and a senior CFO tells you what it means.</p>
             </div>
-            <div class="method">
+            <div class="method stagger">
                 <div class="m">
                     <div class="num">01 &middot; Weeks 1&ndash;4</div>
                     <h3>Automate the back office</h3>
@@ -182,27 +199,71 @@
                     </ul>
                 </div>
             </div>
-            <p class="not-ai" style="color: var(--gray-700); background: var(--cream); margin-top: 40px;"><strong style="color: var(--navy);">Your bookkeeper isn't going anywhere.</strong> We automate the busywork around them so they can focus on accuracy and exceptions. Most become more valuable, not less.</p>
+            <p class="reveal" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); color: var(--gray-600); max-width: 760px;"><strong style="color: var(--navy);">Your bookkeeper isn't going anywhere.</strong> We automate the busywork around them so they can focus on accuracy and exceptions. Most become more valuable, not less.</p>
         </div>
     </section>
 
-    <!-- Deliverables -->
-    <section class="bg-cream">
+    <!-- Work product -->
+    <section class="bg-white">
         <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">What you'll look at every week</span>
+            <div class="section-header reveal">
+                <span class="eyebrow">What lands in your inbox</span>
                 <h2>Numbers you'll actually use</h2>
+                <p>Built once, updated automatically, and short enough to read on your phone.</p>
             </div>
-            <div class="thumbs">
-                <div class="thumb">
-                    <img src="/images/deliverables/13-week-cashflow.svg" alt="13-week rolling cash flow forecast showing weekly inflows, outflows, and ending cash" loading="lazy">
-                    <h3>13-week cash forecast</h3>
-                    <p>Know three months ahead whether payroll, a truck purchase, or a slow month will pinch.</p>
+            <div class="pillar" style="margin-top: 64px; align-items: start;">
+                <div class="reveal">
+                    <div class="doc" data-anim="cash">
+                        <div class="doc-head"><span class="doc-title">13-week cash forecast</span><span class="doc-meta">Updated Mon 7:00am</span></div>
+                        <div class="doc-body">
+                            <svg class="cash-svg" viewBox="0 0 600 250" role="img" aria-label="13-week cash forecast showing ending cash dipping below the payroll floor in week 11">
+                                <defs>
+                                    <linearGradient id="cashFill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#0a1628" stop-opacity=".12"/>
+                                        <stop offset="1" stop-color="#0a1628" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <g class="grid"><line x1="30" y1="30" x2="570" y2="30"/><line x1="30" y1="120" x2="570" y2="120"/><line x1="30" y1="210" x2="570" y2="210"/></g>
+                                <text class="lbl" x="30" y="22">$450K</text>
+                                <text class="lbl" x="30" y="112">$300K</text>
+                                <line class="floor" x1="30" y1="180" x2="570" y2="180"/>
+                                <text class="floor-lbl" x="34" y="174">Payroll floor $200K</text>
+                                <path class="area" d="M30,54 L75,81 L120,102 L165,63 L210,90 L255,126 L300,156 L345,114 L390,138 L435,171 L480,192 L525,144 L570,159 L570,210 L30,210 Z"/>
+                                <path class="line" d="M30,54 L75,81 L120,102 L165,63 L210,90 L255,126 L300,156 L345,114 L390,138 L435,171 L480,192 L525,144 L570,159"/>
+                                <g class="pinch-g">
+                                    <line x1="480" y1="186" x2="480" y2="74" stroke="#b4533c" stroke-width="1"/>
+                                    <text class="note" x="472" y="52" text-anchor="end">Week 11: $180K</text>
+                                    <text class="note-sub" x="472" y="68" text-anchor="end">Spotted 10 weeks early</text>
+                                    <circle class="pinch-ring" cx="480" cy="192" r="5"/>
+                                    <circle class="pinch" cx="480" cy="192" r="4.5"/>
+                                </g>
+                                <g class="lbl"><text x="24" y="234">W1</text><text x="249" y="234">W6</text><text x="471" y="234">W11</text><text x="560" y="234">W13</text></g>
+                            </svg>
+                        </div>
+                        <div class="doc-foot"><span>Fix: <b>pull forward 2 large invoices, delay truck purchase 3 wks</b></span><span>Illustrative</span></div>
+                    </div>
                 </div>
-                <div class="thumb">
-                    <img src="/images/deliverables/kpi-dashboard.svg" alt="KPI dashboard showing revenue, margins, and operating metrics" loading="lazy">
-                    <h3>KPI dashboard</h3>
-                    <p>Revenue, margin, AR, and the operating metrics that drive your business, all on one page.</p>
+                <div class="reveal">
+                    <div class="doc">
+                        <div class="doc-head"><span class="doc-title">Monday flash &middot; week of Nov 10</span><span class="doc-meta">Sent 7:00am</span></div>
+                        <div class="flash-grid">
+                            <div><div class="k">Revenue, week</div><div class="v">$214K</div><div class="d up">+6.1% vs plan</div></div>
+                            <div><div class="k">Gross margin</div><div class="v">41.2%</div><div class="d up">+1.4 pts</div></div>
+                            <div><div class="k">Cash on hand</div><div class="v">$410K</div><div class="d dn">13-wk low: $180K (W11)</div></div>
+                            <div><div class="k">AR over 60 days</div><div class="v">$38K</div><div class="d dn">3 accounts</div></div>
+                            <div><div class="k">Jobs completed</div><div class="v">186</div><div class="d up">+9 vs last wk</div></div>
+                            <div><div class="k">Crew utilization</div><div class="v">87%</div><div class="d dn">Crew 4 at 71%</div></div>
+                        </div>
+                        <div class="flash-actions">
+                            <h4>This week</h4>
+                            <ul>
+                                <li>Call the 3 accounts over 60 days ($38K)</li>
+                                <li>Rebalance Crew 4 routes before adding a hire</li>
+                                <li>Hold truck purchase until week 14</li>
+                            </ul>
+                        </div>
+                        <div class="doc-foot"><span>Read time: <b>2 minutes</b></span><span>Illustrative</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,25 +273,25 @@
     <section class="bg-navy">
         <div class="container">
             <div class="pillar">
-                <div>
+                <div class="reveal">
                     <span class="eyebrow">Thinking about selling someday?</span>
                     <h2>Buyers pay for clean numbers.</h2>
                     <p class="lead">We also advise the people who buy companies like yours, so we know exactly what a buyer's diligence team will pick apart. Fix it now and you'll run a better business today and walk into a sale with numbers that hold up.</p>
                 </div>
-                <ul class="checks">
-                    <li><strong>Add-backs documented</strong> before a buyer questions them</li>
-                    <li><strong>Monthly financials</strong> that tie to the bank and the tax return</li>
-                    <li><strong>Customer and job data</strong> that proves revenue quality</li>
-                    <li><strong>A finance function</strong> that doesn't leave when you do</li>
+                <ul class="checks reveal">
+                    <li><span><strong>Add-backs documented</strong> before a buyer questions them</span></li>
+                    <li><span><strong>Monthly financials</strong> that tie to the bank and the tax return</span></li>
+                    <li><span><strong>Customer and job data</strong> that proves revenue quality</span></li>
+                    <li><span><strong>A finance function</strong> that doesn't leave when you do</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Offer -->
-    <section class="bg-white">
+    <section>
         <div class="container">
-            <div class="offer" style="margin-top: 0;">
+            <div class="offer reveal" style="margin-top: 0;">
                 <div>
                     <h3>Free Finance Automation Assessment</h3>
                     <p>A 30-minute review of how your finances run today. We'll show you where the hours and dollars are leaking and what a 90-day fix would look like. No obligation, and you keep the findings either way.</p>
@@ -249,12 +310,13 @@
     </section>
 
     <!-- FAQ -->
-    <section class="bg-cream">
+    <section class="bg-white">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 0;">
+            <div class="section-header reveal">
+                <span class="eyebrow">FAQ</span>
                 <h2>Questions owners ask us</h2>
             </div>
-            <div class="faq-list">
+            <div class="faq-list reveal">
                 <details>
                     <summary>Do I have to switch accounting software?</summary>
                     <p>Almost never. We work with QuickBooks, Xero, and the field-service and ops software you already use. Automation tools are layered on top, not swapped in.</p>
@@ -281,7 +343,8 @@
 
     <!-- Final CTA -->
     <section class="final">
-        <div class="container">
+        <div class="container reveal">
+            <span class="eyebrow">Next step</span>
             <h2>You built the business. Let us build the finance team behind it.</h2>
             <p>Start with a free 30-minute assessment. You'll know exactly what's broken and what fixing it looks like.</p>
             <div class="btns">
@@ -346,5 +409,6 @@
     </a>
 
     <script src="/js/main.js"></script>
+    <script src="/js/motion.js"></script>
 </body>
 </html>
