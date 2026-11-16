@@ -1,7 +1,11 @@
 # ThriveStart
 
 ## About
-ThriveStart is a fractional CFO and M&A advisory firm serving founders, independent sponsors, and PE-backed companies in the United States. We provide subscription-based finance services including CFO services, M&A advisory, capital advisory, financial due diligence, financial workouts, deal structuring, SBA distressed situations, and AI financial implementation.
+ThriveStart, founded by Carter Henderson, does two things: (1) buy-side M&A advisory that gets first-time independent sponsors and search fund operators from LOI to close and through the first 100 days, and (2) AI-driven finance automation plus senior CFO advisory for established $10M+ businesses that have never had a real finance team.
+
+## Primary pages
+- For independent sponsors: https://thrivestart.co/independent-sponsors/
+- For business owners: https://thrivestart.co/business-owners/
 
 ## Services
 

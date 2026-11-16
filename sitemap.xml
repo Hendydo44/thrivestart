@@ -3,9 +3,23 @@
     <!-- Homepage -->
     <url>
         <loc>https://thrivestart.co/</loc>
-        <lastmod>2025-01-19</lastmod>
+        <lastmod>2026-11-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+
+    <!-- Audience Paths -->
+    <url>
+        <loc>https://thrivestart.co/independent-sponsors/</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://thrivestart.co/business-owners/</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <!-- Contact Page -->
