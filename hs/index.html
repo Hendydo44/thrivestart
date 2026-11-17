@@ -10,16 +10,17 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/v2.css">
     <link rel="stylesheet" href="/hs/styles.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 </head>
-<body>
+<body class="v2">
     <!-- Navigation (landing page: no site nav) -->
     <nav id="navbar" class="lp-nav">
         <div class="container">
@@ -28,103 +29,111 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero hs-hero">
+    <!-- Hero -->
+    <section class="v2-hero">
         <div class="container">
-            <div class="hero-content">
-                <!-- Alternative headlines (keep for testing):
-                "Your business grew. Your finances didn't."
-                "CFO-level finance for pest control and landscaping companies."
-                -->
-                <h1>More cash from the customers you already have.</h1>
-                <p class="hero-subtitle">Fractional CFO for route-based service businesses doing $3M to $20M. Better cash flow now. A business ready to scale or sell later.</p>
-                <div class="hero-buttons">
-                    <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary btn-lg">Book a 30-Minute Call</a>
-                    <a href="#scorecard" class="btn btn-secondary btn-lg">Take the Cash Leak Scorecard</a>
-                </div>
+            <!-- Alternative headlines (keep for testing):
+            "Your business grew. Your finances didn't."
+            "CFO-level finance for pest control and landscaping companies."
+            -->
+            <span class="eyebrow rise">Fractional CFO / Pest control &amp; landscaping</span>
+            <h1 class="rise d1">More cash from <em>the customers you already have.</em></h1>
+            <p class="sub rise d2">Fractional CFO for route-based service businesses doing $3M to $20M. Better cash flow now. A business ready to scale or sell later.</p>
+            <div class="hero-buttons rise d3">
+                <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary">Book a 30-Minute Call
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#scorecard" class="btn btn-ghost">Take the Cash Leak Scorecard</a>
+            </div>
+        </div>
+        <div class="ticker rise d4" aria-hidden="true" style="margin-top: 0;">
+            <div class="ticker-track">
+                <span>Annual price increases</span><span>Autopay</span><span>Prepaid annual plans</span><span>Cancellation rate</span><span>Route density</span><span>Revenue per tech</span><span>Chemical cost</span><span>Winter cash</span><span>Crew labor %</span><span>Job costing</span><span>Equipment financing</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="proof">
+                <div><strong>$3&ndash;20M</strong>revenue businesses</div>
+                <div><strong>2&ndash;3 wks</strong>to a full Cash Flow Tune-Up</div>
+                <div><strong>Fixed fee</strong>no open-ended hours</div>
+                <div><strong>30 min</strong>first call, no pitch</div>
             </div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section class="section bg-cream">
+    <!-- Problems -->
+    <section>
         <div class="container">
-            <div class="section-header">
-                <h2>Sound familiar?</h2>
+            <div class="section-header reveal">
+                <span class="eyebrow">Sound familiar?</span>
+                <h2>Good business. Leaky cash.</h2>
+                <p>The customers are loyal and the trucks are full. The money still isn't showing up where it should.</p>
             </div>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <p>Prices haven't gone up in years</p>
-                </div>
-                <div class="problem-card">
-                    <p>Too much revenue isn't on autopay. AR keeps growing.</p>
-                </div>
-                <div class="problem-card">
-                    <p>No idea which routes, crews, or techs actually make money</p>
-                </div>
-                <div class="problem-card">
-                    <p>Cash gets tight every winter</p>
-                </div>
-                <div class="problem-card">
-                    <p>Books are a month behind and nobody trusts the numbers</p>
-                </div>
-                <div class="problem-card">
-                    <p>Bank or buyer asks for financials and you scramble</p>
-                </div>
+            <div class="problems-grid stagger">
+                <div class="problem-card"><p>Prices haven't gone up in years</p></div>
+                <div class="problem-card"><p>Too much revenue isn't on autopay. AR keeps growing.</p></div>
+                <div class="problem-card"><p>No idea which routes, crews, or techs actually make money</p></div>
+                <div class="problem-card"><p>Cash gets tight every winter</p></div>
+                <div class="problem-card"><p>Books are a month behind and nobody trusts the numbers</p></div>
+                <div class="problem-card"><p>Bank or buyer asks for financials and you scramble</p></div>
             </div>
         </div>
     </section>
 
-    <!-- The Offer Section -->
-    <section class="section bg-white">
+    <!-- The Offer -->
+    <section class="bg-white">
         <div class="container">
-            <div class="section-header">
-                <h2>The Cash Flow Tune-Up</h2>
-                <p>A fixed-fee engagement. Two to three weeks. You walk away knowing exactly where your cash is leaking and how to fix it.</p>
-            </div>
-            <div class="offer-grid">
-                <div class="offer-card">
-                    <h3>What you get</h3>
-                    <ul class="offer-list">
-                        <li>13-week cash flow forecast</li>
-                        <li>AR aging analysis and collections plan</li>
-                        <li>Pricing review with recommendations</li>
-                        <li>Margin analysis by route, crew, or tech</li>
-                        <li>Top 3 cash levers with dollar estimates</li>
+            <div class="pillar">
+                <div class="reveal">
+                    <span class="eyebrow">The Cash Flow Tune-Up</span>
+                    <h2>Find the leaks in two to three weeks.</h2>
+                    <p class="lead">A fixed-fee engagement. You walk away knowing exactly where your cash is leaking, what it's worth, and how to fix it.</p>
+                    <ul class="checks">
+                        <li><span><strong>13-week cash flow forecast</strong> so you see tight weeks coming</span></li>
+                        <li><span><strong>AR aging analysis</strong> and a collections plan</span></li>
+                        <li><span><strong>Pricing review</strong> with specific recommendations</span></li>
+                        <li><span><strong>Margin by route, crew, or tech</strong></span></li>
+                        <li><span><strong>Top 3 cash levers</strong> with dollar estimates</span></li>
                     </ul>
+                    <p class="next-note"><strong>What comes next:</strong> ongoing monthly CFO support to execute on what we find, including monthly close, a KPI dashboard you actually use, and tracking each lever until the cash shows up.</p>
                 </div>
-                <div class="offer-card offer-card-highlight">
-                    <h3>What comes next</h3>
-                    <p>Ongoing monthly CFO support to execute on what we find:</p>
-                    <ul class="offer-list">
-                        <li>Monthly close and clean financials</li>
-                        <li>KPI dashboard you actually use</li>
-                        <li>Execute the levers, track the results</li>
-                    </ul>
+                <div class="reveal">
+                    <div class="doc" data-anim="levers">
+                        <div class="doc-head"><span class="doc-title">Tune-Up output &middot; top 3 cash levers</span><span class="doc-meta">Annual impact</span></div>
+                        <div class="doc-body levers">
+                            <div class="lv"><div class="lv-top"><span>Annual price increase of 4%</span><b>+$168K</b></div><div class="lv-bar"><i style="--w:100%"></i></div><div class="lv-why">Last increase was 26 months ago</div></div>
+                            <div class="lv"><div class="lv-top"><span>Cut cancellations from 22% to 15%</span><b>+$92K</b></div><div class="lv-bar"><i style="--w:55%"></i></div><div class="lv-why">Win-back calls and prepaid annual plans</div></div>
+                            <div class="lv"><div class="lv-top"><span>Move autopay from 35% to 70%</span><b>+$44K</b></div><div class="lv-bar"><i style="--w:26%"></i></div><div class="lv-why">Fewer late payments and write-offs</div></div>
+                            <div class="lv-total"><span>Recurring upside</span><b>+$304K / yr</b></div>
+                            <div class="lv-once"><span>Plus: collect in 25 days instead of 48</span><b>$265K cash, once</b></div>
+                        </div>
+                        <div class="doc-foot"><span>$4.2M pest control company</span><span>Illustrative</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="section bg-navy">
+    <!-- How it works -->
+    <section>
         <div class="container">
-            <div class="section-header">
-                <h2 class="text-white">How it works</h2>
+            <div class="section-header reveal">
+                <span class="eyebrow">How it works</span>
+                <h2>Call. Tune-Up. Monthly CFO.</h2>
             </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <span class="step-number">1</span>
+            <div class="method stagger">
+                <div class="m">
+                    <div class="num">01 &middot; 30 minutes</div>
                     <h3>Call</h3>
-                    <p>30 minutes. We talk about your business, your numbers, and whether this is a fit.</p>
+                    <p>We talk about your business, your numbers, and whether this is a fit.</p>
                 </div>
-                <div class="step-card">
-                    <span class="step-number">2</span>
+                <div class="m">
+                    <div class="num">02 &middot; 2&ndash;3 weeks</div>
                     <h3>Tune-Up</h3>
                     <p>I dig into your books, find the leaks, and deliver a clear action plan with dollar estimates.</p>
                 </div>
-                <div class="step-card">
-                    <span class="step-number">3</span>
+                <div class="m">
+                    <div class="num">03 &middot; Every month</div>
                     <h3>Monthly CFO</h3>
                     <p>We execute. Monthly close, KPI tracking, and ongoing advisory to keep cash flowing.</p>
                 </div>
@@ -132,50 +141,106 @@
         </div>
     </section>
 
-    <!-- Industry Levers Section -->
-    <section class="section bg-cream" id="industries">
+    <!-- Industry levers -->
+    <section class="bg-white" id="industries">
         <div class="container">
-            <div class="section-header">
-                <h2>Industry-specific levers</h2>
-                <p>Different businesses, different cash drivers. Here's what I focus on.</p>
-            </div>
-            <div class="industry-tabs">
-                <button class="industry-tab active" data-tab="pest">Pest Control</button>
-                <button class="industry-tab" data-tab="landscape">Landscaping</button>
-            </div>
-            <div class="industry-content">
-                <div class="industry-panel active" id="panel-pest">
-                    <ul class="lever-list">
-                        <li><strong>Annual price increases</strong> - Most operators leave 5-10% on the table every year</li>
-                        <li><strong>Autopay and prepaid annual plans</strong> - Predictable cash and lower churn</li>
-                        <li><strong>Cancellation rate</strong> - Every point of churn you cut is pure margin</li>
-                        <li><strong>Revenue per tech</strong> - Are your routes dense enough?</li>
-                        <li><strong>Chemical cost as % of revenue</strong> - Small changes add up fast</li>
-                    </ul>
+            <div class="pillar" style="align-items: end;">
+                <div class="reveal">
+                    <span class="eyebrow">Industry-specific levers</span>
+                    <h2>Different businesses, different cash drivers.</h2>
                 </div>
-                <div class="industry-panel" id="panel-landscape">
-                    <ul class="lever-list">
-                        <li><strong>Winter cash planning</strong> - Build the reserve before November</li>
-                        <li><strong>Maintenance vs. enhancement mix</strong> - Recurring revenue is worth more</li>
-                        <li><strong>Crew labor %</strong> - Track it weekly, not monthly</li>
-                        <li><strong>Job costing on installs</strong> - Know your actual margin before you bid</li>
-                        <li><strong>Equipment financing</strong> - Match payments to useful life</li>
-                    </ul>
+                <div class="reveal ind-switch">
+                    <div class="seg ind-seg" role="group" aria-label="Choose your industry">
+                        <span class="knob" aria-hidden="true"></span>
+                        <button type="button" class="industry-tab active" data-tab="pest" aria-pressed="true">Pest Control</button>
+                        <button type="button" class="industry-tab" data-tab="landscape" aria-pressed="false">Landscaping</button>
+                    </div>
                 </div>
             </div>
-            <p class="industry-note">Also working with electrical and other route-based service companies.</p>
+
+            <div class="industry-panel active" id="panel-pest">
+                <div class="pillar ind-body">
+                    <ul class="checks">
+                        <li><span><strong>Annual price increases.</strong> Most operators leave 5&ndash;10% on the table every year.</span></li>
+                        <li><span><strong>Autopay and prepaid annual plans.</strong> Predictable cash and lower churn.</span></li>
+                        <li><span><strong>Cancellation rate.</strong> Every point of churn you cut is pure margin.</span></li>
+                        <li><span><strong>Revenue per tech.</strong> Are your routes dense enough?</span></li>
+                        <li><span><strong>Chemical cost as % of revenue.</strong> Small changes add up fast.</span></li>
+                    </ul>
+                    <div class="doc ledger" data-anim="scan">
+                        <div class="doc-head"><span class="doc-title">Route scorecard &middot; October</span><span class="doc-meta">5 routes</span></div>
+                        <div class="ledger-wrap">
+                            <table>
+                                <thead><tr><th>Route</th><th class="amt">Stops / day</th><th class="amt">Rev / tech day</th><th>Margin</th></tr></thead>
+                                <tbody>
+                                    <tr><td>North<span class="why">Dense, mostly quarterly plans</span></td><td class="amt">17</td><td class="amt">$1,240</td><td><span class="pill ok">41%</span></td></tr>
+                                    <tr><td>Lakeside<span class="why">High autopay, low churn</span></td><td class="amt">16</td><td class="amt">$1,180</td><td><span class="pill ok">39%</span></td></tr>
+                                    <tr><td>Downtown<span class="why">Commercial, slow payers</span></td><td class="amt">12</td><td class="amt">$1,050</td><td><span class="pill part">31%</span></td></tr>
+                                    <tr><td>East County<span class="why">42 miles of drive time a day</span></td><td class="amt">9</td><td class="amt">$760</td><td><span class="pill no">18%</span></td></tr>
+                                    <tr><td>Ridgeview<span class="why">Priced 3 years ago</span></td><td class="amt">13</td><td class="amt">$820</td><td><span class="pill no">22%</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="doc-foot"><span>Fix: <b>reprice Ridgeview, merge East County into 2 routes</b></span><span>Illustrative</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="industry-panel" id="panel-landscape">
+                <div class="pillar ind-body">
+                    <ul class="checks">
+                        <li><span><strong>Winter cash planning.</strong> Build the reserve before November.</span></li>
+                        <li><span><strong>Maintenance vs. enhancement mix.</strong> Recurring revenue is worth more.</span></li>
+                        <li><span><strong>Crew labor %.</strong> Track it weekly, not monthly.</span></li>
+                        <li><span><strong>Job costing on installs.</strong> Know your actual margin before you bid.</span></li>
+                        <li><span><strong>Equipment financing.</strong> Match payments to useful life.</span></li>
+                    </ul>
+                    <div class="doc" data-anim="cash">
+                        <div class="doc-head"><span class="doc-title">12-month cash outlook</span><span class="doc-meta">Month-end cash</span></div>
+                        <div class="doc-body">
+                            <svg class="cash-svg" viewBox="0 0 600 250" role="img" aria-label="12-month cash outlook dipping below the payroll floor in January and February">
+                                <defs>
+                                    <linearGradient id="winterFill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#0a1628" stop-opacity=".12"/>
+                                        <stop offset="1" stop-color="#0a1628" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="448" y="30" width="98" height="180" fill="#0a1628" opacity=".04"/>
+                                <g class="grid"><line x1="30" y1="30" x2="570" y2="30"/><line x1="30" y1="120" x2="570" y2="120"/><line x1="30" y1="210" x2="570" y2="210"/></g>
+                                <text class="lbl" x="30" y="22">$900K</text>
+                                <text class="lbl" x="30" y="112">$500K</text>
+                                <line class="floor" x1="30" y1="174" x2="570" y2="174"/>
+                                <text class="floor-lbl" x="34" y="168">Payroll floor $260K</text>
+                                <path class="area" style="fill:url(#winterFill)" d="M30,147 L79,111 L128,75 L177,57 L226,48 L275,57 L324,75 L373,102 L422,138 L471,183 L520,192 L570,165 L570,210 L30,210 Z"/>
+                                <path class="line" d="M30,147 L79,111 L128,75 L177,57 L226,48 L275,57 L324,75 L373,102 L422,138 L471,183 L520,192 L570,165"/>
+                                <g class="pinch-g">
+                                    <line x1="520" y1="186" x2="520" y2="74" stroke="#b4533c" stroke-width="1"/>
+                                    <text class="note" x="512" y="52" text-anchor="end">January: $180K</text>
+                                    <text class="note-sub" x="512" y="68" text-anchor="end">Build the reserve by October</text>
+                                    <circle class="pinch-ring" cx="520" cy="192" r="5"/>
+                                    <circle class="pinch" cx="520" cy="192" r="4.5"/>
+                                </g>
+                                <g class="lbl"><text x="22" y="234">Mar</text><text x="216" y="234">Jul</text><text x="412" y="234">Nov</text><text x="552" y="234">Feb</text></g>
+                            </svg>
+                        </div>
+                        <div class="doc-foot"><span>Fix: <b>prepaid winter plans + seasonal credit line</b></span><span>Illustrative</span></div>
+                    </div>
+                </div>
+            </div>
+            <p class="industry-note reveal">Also working with electrical and other route-based service companies.</p>
         </div>
     </section>
 
-    <!-- Scorecard Section -->
-    <section class="section bg-white" id="scorecard">
+    <!-- Scorecard -->
+    <section id="scorecard">
         <div class="container container-narrow">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="eyebrow">Free, 2 minutes</span>
                 <h2>Cash Leak Scorecard</h2>
                 <p>Answer a few questions. Get an estimate of how much cash you're leaving on the table.</p>
             </div>
 
-            <div class="scorecard-container">
+            <div class="scorecard-container reveal">
                 <!-- Scorecard Form -->
                 <form id="scorecardForm" class="scorecard-form">
                     <div class="form-group">
@@ -193,27 +258,31 @@
                         <input type="number" id="revenue" name="revenue" min="500000" max="100000000" placeholder="e.g. 5000000" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="autopay">% of Recurring Revenue on Autopay</label>
-                        <input type="number" id="autopay" name="autopay" min="0" max="100" placeholder="e.g. 40" required>
-                        <span class="form-hint">What percentage of your recurring customers are on automatic payment?</span>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="autopay">% of Recurring Revenue on Autopay</label>
+                            <input type="number" id="autopay" name="autopay" min="0" max="100" placeholder="e.g. 40" required>
+                            <span class="form-hint">Share of recurring customers on automatic payment</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priceIncrease">Months Since Last Price Increase</label>
+                            <input type="number" id="priceIncrease" name="priceIncrease" min="0" max="120" placeholder="e.g. 24" required>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="priceIncrease">Months Since Last Price Increase</label>
-                        <input type="number" id="priceIncrease" name="priceIncrease" min="0" max="120" placeholder="e.g. 24" required>
-                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="arDays">AR Days (Average Days to Collect)</label>
+                            <input type="number" id="arDays" name="arDays" min="0" max="180" placeholder="e.g. 35" required>
+                            <span class="form-hint">Average days from invoice to payment</span>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="arDays">AR Days (Average Days to Collect)</label>
-                        <input type="number" id="arDays" name="arDays" min="0" max="180" placeholder="e.g. 35" required>
-                        <span class="form-hint">How many days on average from invoice to payment?</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="laborPercent">Labor as % of Revenue</label>
-                        <input type="number" id="laborPercent" name="laborPercent" min="0" max="100" placeholder="e.g. 45" required>
-                        <span class="form-hint">Total labor cost divided by revenue</span>
+                        <div class="form-group">
+                            <label for="laborPercent">Labor as % of Revenue</label>
+                            <input type="number" id="laborPercent" name="laborPercent" min="0" max="100" placeholder="e.g. 45" required>
+                            <span class="form-hint">Total labor cost divided by revenue</span>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -236,9 +305,9 @@
                     </div>
 
                     <div class="cash-estimate">
-                        <p class="estimate-label">Estimated annual cash left on the table:</p>
+                        <p class="estimate-label">Estimated annual cash left on the table</p>
                         <p class="estimate-value" id="cashEstimate">$--</p>
-                        <p class="estimate-disclaimer">This is a rough estimate based on industry benchmarks. Actual results vary.</p>
+                        <p class="estimate-disclaimer">A rough estimate based on industry benchmarks. Actual results vary.</p>
                     </div>
 
                     <div class="callouts" id="callouts">
@@ -286,24 +355,35 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section bg-navy">
-        <div class="container container-narrow">
-            <div class="about-content">
-                <h2 class="text-white">About me</h2>
-                <p class="text-gray">10 years in private equity and M&amp;A. I've acquired local, owner-operated service businesses and built the finance functions behind them from scratch. I know what lenders and buyers look for because I've sat on that side of the table.</p>
-                <p class="text-gray">I work with owners who've outgrown their bookkeeper but don't need a full-time CFO. If that's you, let's talk.</p>
-                <p class="text-gray"><a href="https://www.linkedin.com/in/carter-henderson-finance/" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 600;">Connect with me on LinkedIn &rarr;</a></p>
+    <!-- About -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="founder">
+                <!-- TODO: add headshot: <img src="/images/carter.jpg" alt="Carter Henderson"> inside .founder-photo -->
+                <div class="founder-photo reveal">CH</div>
+                <div class="reveal">
+                    <span class="eyebrow">About me</span>
+                    <blockquote>&ldquo;I know what lenders and buyers look for because I've sat on that side of the table.&rdquo;</blockquote>
+                    <p style="margin-bottom: 16px; color: var(--gray-600);">10 years in private equity and M&amp;A. I've acquired local, owner-operated service businesses and built the finance functions behind them from scratch.</p>
+                    <p style="margin-bottom: 22px; color: var(--gray-600);">I work with owners who've outgrown their bookkeeper but don't need a full-time CFO. If that's you, let's talk.</p>
+                    <div class="sig">Carter Henderson</div>
+                    <div class="role">Founder, ThriveStart &middot; <a href="https://www.linkedin.com/in/carter-henderson-finance/" target="_blank" rel="noopener">Connect on LinkedIn &rarr;</a></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="cta-section">
-        <div class="container">
+    <!-- Final CTA -->
+    <section class="final">
+        <div class="container reveal">
+            <span class="eyebrow">Next step</span>
             <h2>Ready to find the cash hiding in your business?</h2>
             <p>Book a 30-minute call. No pitch, no pressure. We'll talk about your numbers and see if this is a fit.</p>
-            <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary btn-lg">Book a 30-Minute Call</a>
+            <div class="btns">
+                <a href="https://calendly.com/thrivestart/15min" class="btn btn-primary">Book a 30-Minute Call</a>
+                <a href="#scorecard" class="btn btn-ghost">Take the scorecard first</a>
+            </div>
+            <p class="small">Fixed fee &middot; Results in 2&ndash;3 weeks</p>
         </div>
     </section>
 
@@ -323,6 +403,7 @@
 
     <!-- Scripts -->
     <script src="/js/main.js"></script>
+    <script src="/js/motion.js"></script>
     <script src="/hs/scorecard.js"></script>
 
     <!-- Analytics -->

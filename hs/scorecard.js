@@ -10,6 +10,9 @@
             tabs.forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.industry-panel').forEach(p => p.classList.remove('active'));
             tab.classList.add('active');
+            tabs.forEach(t => t.setAttribute('aria-pressed', String(t === tab)));
+            const seg = tab.closest('.ind-seg');
+            if (seg) seg.classList.toggle('second', tab === tabs[tabs.length - 1]);
             const panel = document.getElementById('panel-' + tab.dataset.tab);
             if (panel) panel.classList.add('active');
         });
